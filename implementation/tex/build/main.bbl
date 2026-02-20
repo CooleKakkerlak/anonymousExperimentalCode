@@ -1,0 +1,623 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global/global}
+    \entry{21970}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=5da2a861988750273049b20a9ede1e8e}{%
+           family={Chazelle},
+           familyi={C\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1744c71a13ec525bb87612fff17bcfe1}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0614b68967e5d9633e3014544616a91}
+      \strng{fullhash}{d0614b68967e5d9633e3014544616a91}
+      \strng{fullhashraw}{d0614b68967e5d9633e3014544616a91}
+      \strng{bibnamehash}{d0614b68967e5d9633e3014544616a91}
+      \strng{authorbibnamehash}{d0614b68967e5d9633e3014544616a91}
+      \strng{authornamehash}{d0614b68967e5d9633e3014544616a91}
+      \strng{authorfullhash}{d0614b68967e5d9633e3014544616a91}
+      \strng{authorfullhashraw}{d0614b68967e5d9633e3014544616a91}
+      \field{labelalpha}{CF88}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{[Proceedings 1988] 29th Annual Symposium on Foundations of Computer Science}
+      \field{title}{A deterministic view of random sampling and its use in geometry}
+      \field{year}{1988}
+      \field{pages}{539\bibrangedash 549}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/SFCS.1988.21970
+      \endverb
+      \keyw{Sampling methods;Polynomials;Computational geometry;Computer science;Nearest neighbor searches}
+    \endentry
+    \entry{MOUNT200097}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=827b83f56eb6ef772078b4c0c8d497aa}{%
+           family={Mount},
+           familyi={M\bibinitperiod},
+           given={David\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=ad1aab57432f622d5ec53161cfe9b366}{%
+           family={Netanyahu},
+           familyi={N\bibinitperiod},
+           given={Nathan\bibnamedelima S.},
+           giveni={N\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=63937971a65222d15155d3b83cbb477c}{%
+           family={Silverman},
+           familyi={S\bibinitperiod},
+           given={Ruth},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9ac5ae372527081632cbd23275ac73df}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Angela\bibnamedelima Y.},
+           giveni={A\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{219adf2ee84eafe27d815563c6192920}
+      \strng{fullhash}{376f2478749eb05238c282cfa5e9ddbd}
+      \strng{fullhashraw}{376f2478749eb05238c282cfa5e9ddbd}
+      \strng{bibnamehash}{219adf2ee84eafe27d815563c6192920}
+      \strng{authorbibnamehash}{219adf2ee84eafe27d815563c6192920}
+      \strng{authornamehash}{219adf2ee84eafe27d815563c6192920}
+      \strng{authorfullhash}{376f2478749eb05238c282cfa5e9ddbd}
+      \strng{authorfullhashraw}{376f2478749eb05238c282cfa5e9ddbd}
+      \field{labelalpha}{Mou+00}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The nearest neighbor problem is that of preprocessing a set P of n data points in Rd so that, given any query point q, the closest point in P to q can be determined efficiently. In the chromatic nearest neighbor problem, each point of P is assigned a color, and the problem is to determine the color of the nearest point to the query point. More generally, given k⩾1, the problem is to determine the color occurring most frequently among the k nearest neighbors. The chromatic version of the nearest neighbor problem is used in many applications in pattern recognition and learning. In this paper we present a simple algorithm for solving the chromatic k nearest neighbor problem. We provide a query sensitive analysis, which shows that if the color classes form spatially well separated clusters (as often happens in practice), then queries can be answered quite efficiently. We also allow the user to specify an error bound ε⩾0, and consider the same problem in the context of approximate nearest neighbor searching. We present empirical evidence that for well clustered data sets, this approach leads to significant improvements in efficiency.}
+      \field{issn}{0925-7721}
+      \field{journaltitle}{Computational Geometry}
+      \field{number}{3}
+      \field{title}{Chromatic nearest neighbor searching: A query sensitive approach}
+      \field{volume}{17}
+      \field{year}{2000}
+      \field{pages}{97\bibrangedash 119}
+      \range{pages}{23}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0925-7721(00)00021-3
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0925772100000213
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0925772100000213
+      \endverb
+      \keyw{Chromatic nearest neighbors,Classification algorithms,Pattern recognition,Multidimensional searching,BBD trees,Branch-and-bound search,Query sensitive analysis}
+    \endentry
+    \entry{Chan2014}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=97a8989aef0940ca6e7fc0ae977e3594}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={Timothy\bibnamedelima M.},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=6ec625ba196348b3b26398d5aea053e4}{%
+           family={Durocher},
+           familyi={D\bibinitperiod},
+           given={Stephane},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bf3c17915de41ddc52edc0c2616502a8}{%
+           family={Larsen},
+           familyi={L\bibinitperiod},
+           given={Kasper\bibnamedelima Green},
+           giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=039ef1f428fae646dda1ddee1665e14a}{%
+           family={Morrison},
+           familyi={M\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=707778508ef31dbc9b4256ecba13c1d3}{%
+           family={Wilkinson},
+           familyi={W\bibinitperiod},
+           given={Bryan\bibnamedelima T.},
+           giveni={B\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c594ec54b68f24aa6b9c239bf90e46f6}
+      \strng{fullhash}{1182a69f2d880cacc7e2e50dbd7e7bb4}
+      \strng{fullhashraw}{1182a69f2d880cacc7e2e50dbd7e7bb4}
+      \strng{bibnamehash}{c594ec54b68f24aa6b9c239bf90e46f6}
+      \strng{authorbibnamehash}{c594ec54b68f24aa6b9c239bf90e46f6}
+      \strng{authornamehash}{c594ec54b68f24aa6b9c239bf90e46f6}
+      \strng{authorfullhash}{1182a69f2d880cacc7e2e50dbd7e7bb4}
+      \strng{authorfullhashraw}{1182a69f2d880cacc7e2e50dbd7e7bb4}
+      \field{labelalpha}{Cha+14}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A mode of a multiset S is an element a∈S of maximum multiplicity; that is, a occurs at least as frequently as any other element in S. Given an array A[1:n] of n elements, we consider a basic problem: constructing a static data structure that efficiently answers range mode queries on A. Each query consists of an input pair of indices (i,j) for which a mode of A[i:j] must be returned. The best previous data structure with linear space, by Krizanc, Morin, and Smid (Proceedings of the International Symposium on Algorithms and Computation (ISAAC), pp.517--526, 2003), requires {\$}{\backslash}varTheta ({\backslash}sqrt{\{}n{\}}{\backslash}log{\backslash}log n){\$}query time in the worst case. We improve their result and present an O(n)-space data structure that supports range mode queries in {\$}O({\backslash}sqrt{\{}n/{\backslash}log n{\}}){\$}worst-case time. In the external memory model, we give a linear-space data structure that requires {\$}O({\backslash}sqrt{\{}n/B{\}}){\$}I/Os per query, where B denotes the block size. Furthermore, we present strong evidence that a query time significantly below {\$}{\backslash}sqrt{\{}n{\}}{\$}cannot be achieved by purely combinatorial techniques; we show that boolean matrix multiplication of two {\$}{\backslash}sqrt{\{}n{\}} {\backslash}times {\backslash}sqrt{\{}n{\}}{\$}matrices reduces to n range mode queries in an array of size O(n).}
+      \field{issn}{1433-0490}
+      \field{journaltitle}{Theory of Computing Systems}
+      \field{month}{11}
+      \field{number}{4}
+      \field{title}{Linear-Space Data Structures for Range Mode Query in Arrays}
+      \field{volume}{55}
+      \field{year}{2014}
+      \field{pages}{719\bibrangedash 741}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1007/s00224-013-9455-2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00224-013-9455-2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00224-013-9455-2
+      \endverb
+    \endentry
+    \entry{Lucaweihs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=569742fda163d7a022d81360ca601096}{%
+           family={Weihs},
+           familyi={W\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{569742fda163d7a022d81360ca601096}
+      \strng{fullhash}{569742fda163d7a022d81360ca601096}
+      \strng{fullhashraw}{569742fda163d7a022d81360ca601096}
+      \strng{bibnamehash}{569742fda163d7a022d81360ca601096}
+      \strng{authorbibnamehash}{569742fda163d7a022d81360ca601096}
+      \strng{authornamehash}{569742fda163d7a022d81360ca601096}
+      \strng{authorfullhash}{569742fda163d7a022d81360ca601096}
+      \strng{authorfullhashraw}{569742fda163d7a022d81360ca601096}
+      \field{labelalpha}{Wei20}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/Lucaweihs/range-tree}}
+      \field{journaltitle}{GitHub repository}
+      \field{title}{Range Tree}
+      \field{year}{2020}
+    \endentry
+    \entry{vanderhorst_et_al:LIPIcs.ESA.2022.67}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=8a14dae76aa81c1c1255b4b507a7c1cb}{%
+           family={Horst},
+           familyi={H\bibinitperiod},
+           given={Thijs},
+           giveni={T\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+        {{hash=4f86b879838aa67aa650fb4422ca3ce1}{%
+           family={Löffler},
+           familyi={L\bibinitperiod},
+           given={Maarten},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8c63d13a3a87747754b9cbfbbe84e63a}{%
+           family={Staals},
+           familyi={S\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=221f5dac7fd621cfa51cb28e62192432}{%
+           family={Chechik},
+           familyi={C\bibinitperiod},
+           given={Shiri},
+           giveni={S\bibinitperiod}}}%
+        {{hash=697bd3656cca495b0dc036e828de9cc6}{%
+           family={Navarro},
+           familyi={N\bibinitperiod},
+           given={Gonzalo},
+           giveni={G\bibinitperiod}}}%
+        {{hash=86374b7e44b2f2614442acfd95d01b48}{%
+           family={Rotenberg},
+           familyi={R\bibinitperiod},
+           given={Eva},
+           giveni={E\bibinitperiod}}}%
+        {{hash=e1aa0522cded13f81a50bdf09e1d45f0}{%
+           family={Herman},
+           familyi={H\bibinitperiod},
+           given={Grzegorz},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Dagstuhl, Germany}%
+      }
+      \list{publisher}{1}{%
+        {Schloss Dagstuhl -- Leibniz-Zentrum für Informatik}%
+      }
+      \strng{namehash}{7f7a453b576a7a9d5fde690c0478a158}
+      \strng{fullhash}{7f7a453b576a7a9d5fde690c0478a158}
+      \strng{fullhashraw}{7f7a453b576a7a9d5fde690c0478a158}
+      \strng{bibnamehash}{7f7a453b576a7a9d5fde690c0478a158}
+      \strng{authorbibnamehash}{7f7a453b576a7a9d5fde690c0478a158}
+      \strng{authornamehash}{7f7a453b576a7a9d5fde690c0478a158}
+      \strng{authorfullhash}{7f7a453b576a7a9d5fde690c0478a158}
+      \strng{authorfullhashraw}{7f7a453b576a7a9d5fde690c0478a158}
+      \strng{editorbibnamehash}{1e30e236ac95257659de1e204b79c144}
+      \strng{editornamehash}{1e30e236ac95257659de1e204b79c144}
+      \strng{editorfullhash}{2c3959c2fd7c454fcb939a1cd21c483c}
+      \strng{editorfullhashraw}{2c3959c2fd7c454fcb939a1cd21c483c}
+      \field{labelalpha}{HLS22}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{annotation}{Keywords: data structure, nearest neighbor, classification}
+      \field{booktitle}{30th Annual European Symposium on Algorithms (ESA 2022)}
+      \field{isbn}{978-3-95977-247-1}
+      \field{issn}{1868-8969}
+      \field{series}{Leibniz International Proceedings in Informatics (LIPIcs)}
+      \field{title}{{Chromatic k-Nearest Neighbor Queries}}
+      \field{volume}{244}
+      \field{year}{2022}
+      \field{pages}{67:1\bibrangedash 67:14}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.4230/LIPIcs.ESA.2022.67
+      \endverb
+      \verb{urlraw}
+      \verb https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2022.67
+      \endverb
+      \verb{url}
+      \verb https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2022.67
+      \endverb
+    \endentry
+    \entry{cgal:foundations}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=76a0c5d80f9592ec2366811f3b2f4760}{%
+           family={Hemmer},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CGAL Editorial Board}%
+      }
+      \strng{namehash}{76a0c5d80f9592ec2366811f3b2f4760}
+      \strng{fullhash}{76a0c5d80f9592ec2366811f3b2f4760}
+      \strng{fullhashraw}{76a0c5d80f9592ec2366811f3b2f4760}
+      \strng{bibnamehash}{76a0c5d80f9592ec2366811f3b2f4760}
+      \strng{authorbibnamehash}{76a0c5d80f9592ec2366811f3b2f4760}
+      \strng{authornamehash}{76a0c5d80f9592ec2366811f3b2f4760}
+      \strng{authorfullhash}{76a0c5d80f9592ec2366811f3b2f4760}
+      \strng{authorfullhashraw}{76a0c5d80f9592ec2366811f3b2f4760}
+      \field{labelalpha}{Hem24}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{CGAL} User and Reference Manual}
+      \field{edition}{{6.0.1}}
+      \field{title}{Algebraic Foundations}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://doc.cgal.org/6.0.1/Manual/packages.html#PkgAlgebraicFoundations
+      \endverb
+      \verb{url}
+      \verb https://doc.cgal.org/6.0.1/Manual/packages.html#PkgAlgebraicFoundations
+      \endverb
+    \endentry
+    \entry{cgal:numbertypes}{incollection}{}{}
+      \name{author}{4}{}{%
+        {{hash=76a0c5d80f9592ec2366811f3b2f4760}{%
+           family={Hemmer},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4c44e53a1c3f50d1ff1fde5e226b5924}{%
+           family={Hert},
+           familyi={H\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=548425016d4052be77e6be72579abacb}{%
+           family={Pion},
+           familyi={P\bibinitperiod},
+           given={Sylvain},
+           giveni={S\bibinitperiod}}}%
+        {{hash=97ad90f8cf33c9d17eb853351d62f2a5}{%
+           family={Schirra},
+           familyi={S\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CGAL Editorial Board}%
+      }
+      \strng{namehash}{18656e382f1143700c94931cbcabfea0}
+      \strng{fullhash}{d9a8df0762e6dee5bf4f9e4c8987d657}
+      \strng{fullhashraw}{d9a8df0762e6dee5bf4f9e4c8987d657}
+      \strng{bibnamehash}{18656e382f1143700c94931cbcabfea0}
+      \strng{authorbibnamehash}{18656e382f1143700c94931cbcabfea0}
+      \strng{authornamehash}{18656e382f1143700c94931cbcabfea0}
+      \strng{authorfullhash}{d9a8df0762e6dee5bf4f9e4c8987d657}
+      \strng{authorfullhashraw}{d9a8df0762e6dee5bf4f9e4c8987d657}
+      \field{labelalpha}{Hem+24}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{CGAL} User and Reference Manual}
+      \field{edition}{{6.0.1}}
+      \field{title}{Number Types}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://doc.cgal.org/6.0.1/Manual/packages.html#PkgNumberTypes
+      \endverb
+      \verb{url}
+      \verb https://doc.cgal.org/6.0.1/Manual/packages.html#PkgNumberTypes
+      \endverb
+    \endentry
+    \entry{cgal:rangetree}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=d8d93d01034c599f57c5ca84c5e7efb9}{%
+           family={Neyer},
+           familyi={N\bibinitperiod},
+           given={Gabriele},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CGAL Editorial Board}%
+      }
+      \strng{namehash}{d8d93d01034c599f57c5ca84c5e7efb9}
+      \strng{fullhash}{d8d93d01034c599f57c5ca84c5e7efb9}
+      \strng{fullhashraw}{d8d93d01034c599f57c5ca84c5e7efb9}
+      \strng{bibnamehash}{d8d93d01034c599f57c5ca84c5e7efb9}
+      \strng{authorbibnamehash}{d8d93d01034c599f57c5ca84c5e7efb9}
+      \strng{authornamehash}{d8d93d01034c599f57c5ca84c5e7efb9}
+      \strng{authorfullhash}{d8d93d01034c599f57c5ca84c5e7efb9}
+      \strng{authorfullhashraw}{d8d93d01034c599f57c5ca84c5e7efb9}
+      \field{labelalpha}{Ney24}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{CGAL} User and Reference Manual}
+      \field{edition}{{6.0.1}}
+      \field{title}{{dD} Range and Segment Trees}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://doc.cgal.org/6.0.1/Manual/packages.html#PkgSearchStructures
+      \endverb
+      \verb{url}
+      \verb https://doc.cgal.org/6.0.1/Manual/packages.html#PkgSearchStructures
+      \endverb
+    \endentry
+    \entry{OpenStreetMap}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=602f2591276bacf4409eba4a627cff11}{%
+           family={{OpenStreetMap contributors}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{602f2591276bacf4409eba4a627cff11}
+      \strng{fullhash}{602f2591276bacf4409eba4a627cff11}
+      \strng{fullhashraw}{602f2591276bacf4409eba4a627cff11}
+      \strng{bibnamehash}{602f2591276bacf4409eba4a627cff11}
+      \strng{authorbibnamehash}{602f2591276bacf4409eba4a627cff11}
+      \strng{authornamehash}{602f2591276bacf4409eba4a627cff11}
+      \strng{authorfullhash}{602f2591276bacf4409eba4a627cff11}
+      \strng{authorfullhashraw}{602f2591276bacf4409eba4a627cff11}
+      \field{labelalpha}{Ope24}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{ https://www.openstreetmap.org }}
+      \field{title}{{Planet dump retrieved from https://planet.osm.org }}
+      \field{year}{2024}
+    \endentry
+    \entry{vanderPlasImplementation}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=17662e3d58acabedb71164a0d1f18e98}{%
+           family={Plas},
+           familyi={P\bibinitperiod},
+           given={T.D.},
+           giveni={T\bibinitperiod},
+           prefix={van\bibnamedelima der},
+           prefixi={v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {GitHub}%
+      }
+      \strng{namehash}{17662e3d58acabedb71164a0d1f18e98}
+      \strng{fullhash}{17662e3d58acabedb71164a0d1f18e98}
+      \strng{fullhashraw}{17662e3d58acabedb71164a0d1f18e98}
+      \strng{bibnamehash}{17662e3d58acabedb71164a0d1f18e98}
+      \strng{authorbibnamehash}{17662e3d58acabedb71164a0d1f18e98}
+      \strng{authornamehash}{17662e3d58acabedb71164a0d1f18e98}
+      \strng{authorfullhash}{17662e3d58acabedb71164a0d1f18e98}
+      \strng{authorfullhashraw}{17662e3d58acabedb71164a0d1f18e98}
+      \field{labelalpha}{Pla24}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/tvdplas/chromatic-k-nearest-neighbours/}}
+      \field{journaltitle}{GitHub repository}
+      \field{title}{Chromatic k Nearest Neighbours}
+      \field{year}{2024}
+    \endentry
+    \entry{QGIS_software}{manual}{}{}
+      \name{author}{1}{}{%
+        {{hash=87a6547ad0a49e77c9adf891d4365979}{%
+           family={{QGIS Development Team}},
+           familyi={Q\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {QGIS Association}%
+      }
+      \strng{namehash}{87a6547ad0a49e77c9adf891d4365979}
+      \strng{fullhash}{87a6547ad0a49e77c9adf891d4365979}
+      \strng{fullhashraw}{87a6547ad0a49e77c9adf891d4365979}
+      \strng{bibnamehash}{87a6547ad0a49e77c9adf891d4365979}
+      \strng{authorbibnamehash}{87a6547ad0a49e77c9adf891d4365979}
+      \strng{authornamehash}{87a6547ad0a49e77c9adf891d4365979}
+      \strng{authorfullhash}{87a6547ad0a49e77c9adf891d4365979}
+      \strng{authorfullhashraw}{87a6547ad0a49e77c9adf891d4365979}
+      \field{labelalpha}{QGI24}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{QGIS Geographic Information System}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.qgis.org
+      \endverb
+      \verb{url}
+      \verb https://www.qgis.org
+      \endverb
+    \endentry
+    \entry{cgal:dDkernel}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=d5068b78c98df8a3fcc75ab108b83e42}{%
+           family={Seel},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CGAL Editorial Board}%
+      }
+      \strng{namehash}{d5068b78c98df8a3fcc75ab108b83e42}
+      \strng{fullhash}{d5068b78c98df8a3fcc75ab108b83e42}
+      \strng{fullhashraw}{d5068b78c98df8a3fcc75ab108b83e42}
+      \strng{bibnamehash}{d5068b78c98df8a3fcc75ab108b83e42}
+      \strng{authorbibnamehash}{d5068b78c98df8a3fcc75ab108b83e42}
+      \strng{authornamehash}{d5068b78c98df8a3fcc75ab108b83e42}
+      \strng{authorfullhash}{d5068b78c98df8a3fcc75ab108b83e42}
+      \strng{authorfullhashraw}{d5068b78c98df8a3fcc75ab108b83e42}
+      \field{labelalpha}{See24}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{CGAL} User and Reference Manual}
+      \field{edition}{{6.0.1}}
+      \field{title}{{dD} Geometry Kernel}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://doc.cgal.org/6.0.1/Manual/packages.html#PkgKernelD
+      \endverb
+      \verb{url}
+      \verb https://doc.cgal.org/6.0.1/Manual/packages.html#PkgKernelD
+      \endverb
+    \endentry
+    \entry{cgal:arrangement}{incollection}{}{}
+      \name{author}{7}{}{%
+        {{hash=f7bf867509dc86d830353f5bb1ff4290}{%
+           family={Wein},
+           familyi={W\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod}}}%
+        {{hash=74a09f3ae6de1dbcc5cf9b390d77c9f3}{%
+           family={Berberich},
+           familyi={B\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=870f728c48bf995e2eba3b4655070385}{%
+           family={Fogel},
+           familyi={F\bibinitperiod},
+           given={Efi},
+           giveni={E\bibinitperiod}}}%
+        {{hash=fd73c7aee7759f4b337e8af7a25fb315}{%
+           family={Halperin},
+           familyi={H\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=76a0c5d80f9592ec2366811f3b2f4760}{%
+           family={Hemmer},
+           familyi={H\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a249114e0dfde73f7692273b1e711384}{%
+           family={Salzman},
+           familyi={S\bibinitperiod},
+           given={Oren},
+           giveni={O\bibinitperiod}}}%
+        {{hash=acd195fa33eb81a00abe23e5f41e1ffd}{%
+           family={Zukerman},
+           familyi={Z\bibinitperiod},
+           given={Baruch},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CGAL Editorial Board}%
+      }
+      \strng{namehash}{5ed287304a0e35397adfb3346623dea2}
+      \strng{fullhash}{f6d3033c53ad1a1d48b0b2183e5af270}
+      \strng{fullhashraw}{f6d3033c53ad1a1d48b0b2183e5af270}
+      \strng{bibnamehash}{5ed287304a0e35397adfb3346623dea2}
+      \strng{authorbibnamehash}{5ed287304a0e35397adfb3346623dea2}
+      \strng{authornamehash}{5ed287304a0e35397adfb3346623dea2}
+      \strng{authorfullhash}{f6d3033c53ad1a1d48b0b2183e5af270}
+      \strng{authorfullhashraw}{f6d3033c53ad1a1d48b0b2183e5af270}
+      \field{labelalpha}{Wei+24}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{CGAL} User and Reference Manual}
+      \field{edition}{{6.0.1}}
+      \field{title}{{2D} Arrangements}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://doc.cgal.org/6.0.1/Manual/packages.html#PkgArrangementOnSurface2
+      \endverb
+      \verb{url}
+      \verb https://doc.cgal.org/6.0.1/Manual/packages.html#PkgArrangementOnSurface2
+      \endverb
+    \endentry
+    \entry{Met}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=72719ee9e9a508dce4d2fad9168f4495}{%
+           family={WOW},
+           familyi={W\bibinitperiod},
+           given={Met\bibnamedelima Office},
+           giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{72719ee9e9a508dce4d2fad9168f4495}
+      \strng{fullhash}{72719ee9e9a508dce4d2fad9168f4495}
+      \strng{fullhashraw}{72719ee9e9a508dce4d2fad9168f4495}
+      \strng{bibnamehash}{72719ee9e9a508dce4d2fad9168f4495}
+      \strng{authorbibnamehash}{72719ee9e9a508dce4d2fad9168f4495}
+      \strng{authornamehash}{72719ee9e9a508dce4d2fad9168f4495}
+      \strng{authorfullhash}{72719ee9e9a508dce4d2fad9168f4495}
+      \strng{authorfullhashraw}{72719ee9e9a508dce4d2fad9168f4495}
+      \field{labelalpha}{WOW24}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.wow.metoffice.gov.uk/}}
+      \field{note}{[Accessed 12-06-2024]}
+      \field{title}{{M}et {O}ffice {W}{O}{W} - {H}ome {P}age --- wow.metoffice.gov.uk}
+      \field{year}{2024}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
