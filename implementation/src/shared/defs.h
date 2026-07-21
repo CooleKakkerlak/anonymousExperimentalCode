@@ -39,6 +39,7 @@ struct ColoredPoint_2
 	ColoredPoint_2(double x, double y, Color_ color);
 	inline size_t heap_size() const { return 0; }
 };
+std::vector<ColoredPoint_2> convertPoints(std::vector<Point_2>& points, std::vector<Color_>& colors);
 
 struct KQuery
 {
@@ -76,6 +77,7 @@ struct Scenario
 	int numPoints = 10000, numColors = 100;
 	double min = 0, max = 10000;
 	double gamma = 0, alpha = 0;
+	int checkerStrips = 0;
 
 	//real dataset parameters
 	std::string filename;
@@ -94,7 +96,7 @@ struct TestResult
 	bool error = false;
 	std::string dsType;
 	std::chrono::nanoseconds modeBuildTime, rangeBuildTime;
-	std::vector<std::chrono::nanoseconds> modeAverageQueryTimes, rangeAverageQueryTimes;
+	std::vector<std::chrono::nanoseconds> modeAverageQueryTimes, modeAverageQueryTimesExcludingFirst, rangeAverageQueryTimes;
 	long modeSpace, rangeSpace;
 };
 
@@ -105,6 +107,7 @@ struct Dataset2D {
 	int numColors = 0;
 
 	std::pair<Dataset2D, Dataset2D> trainTestSample(double trainFrac, std::mt19937& generator);
+	void writeToIpe(std::string filename, double maxsize = 200);
 };
 
 struct FileOutputter
@@ -135,16 +138,6 @@ public:
 	bool operator!=(const ColorCount &other);
 };
 
-// randomly sample k items from a given vector
-template <class T>
-static std::vector<T> sample(const std::vector<T> &input, int k, std::mt19937 &generator)
-{
-	k = std::min(k, (int)input.size() - 1);
-	// copy, then randomly shuffle array, then take the first k
-	std::vector<T> copy(input.begin(), input.end());
-	std::shuffle(copy.begin(), copy.end(), generator);
-	return std::vector<T>(copy.begin(), copy.begin() + k);
-}
 
 ColorCount maxCount(const std::map<Color_, int> &colorCounts);
 

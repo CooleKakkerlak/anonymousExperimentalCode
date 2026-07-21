@@ -45,6 +45,8 @@ public:
 	void run();
 	void checkCorrectness();
 
+	void printMemoryUsage();
+
 	void runScenario(Scenario& scenario, FuncType makeDS, FileOutputter& file);
 	void runDSOnPoints(Scenario& scenario, std::vector<double>& points, std::vector<Color_>& colors, FuncType makeDS, FileOutputter& file);
 };

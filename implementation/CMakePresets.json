@@ -1,36 +1,36 @@
 {
-    "version": 4,
-    "configurePresets": [
-        {
-            "name": "release",
-            "displayName": "Release",
-            "description": "Preset to use for release builds",
-            "binaryDir": "${sourceDir}/release",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release",
-                "BUILD_TESTING": "OFF"
-            }
-        },
-        {
-            "name": "test",
-            "displayName": "Test",
-            "description": "Preset to use for test builds",
-            "binaryDir": "${sourceDir}/test",
-            "cacheVariables": {
-                "BUILD_TESTING": "ON",
-                "CMAKE_BUILD_TYPE": "Debug",
-                "CGAL_DO_NOT_WARN_ABOUT_CMAKE_BUILD_TYPE": "TRUE"
-            }
-        },
-	{
-            "name": "test-release",
-            "displayName": "Test Optimised",
-            "description": "Preset to use for test builds",
-            "binaryDir": "${sourceDir}/test-release",
-            "cacheVariables": {
-                "BUILD_TESTING": "ON",
-                "CMAKE_BUILD_TYPE": "Release"
-            }
-        }
-    ]
+	"version": 4,
+	"configurePresets": [
+		{
+			"name": "release",
+			"displayName": "Release",
+			"description": "Preset to use for release builds",
+			"binaryDir": "${sourceDir}/release",
+			"cacheVariables": {
+				"CMAKE_BUILD_TYPE": "Release",
+				"BUILD_TESTING": "OFF"
+			}
+		},
+		{
+			"name": "test",
+			"displayName": "Test",
+			"description": "Preset to use for test builds",
+			"binaryDir": "${sourceDir}/test",
+			"cacheVariables": {
+				"BUILD_TESTING": "ON",
+				"CMAKE_BUILD_TYPE": "Debug",
+				"CGAL_DO_NOT_WARN_ABOUT_CMAKE_BUILD_TYPE": "TRUE",
+			}
+		},
+		{
+			"name": "test-release",
+			"displayName": "Test Optimised",
+			"description": "Preset to use for test builds",
+			"binaryDir": "${sourceDir}/test-release",
+			"cacheVariables": {
+				"BUILD_TESTING": "ON",
+				"CMAKE_BUILD_TYPE": "Release"
+			}
+		}
+	]
 }

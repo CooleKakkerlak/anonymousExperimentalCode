@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "chromatic_k_nearest_neighbours",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "chromatic_k_nearest_neighbours::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-chromatic_k_nearest_neighbours-Release-38e5378f159cd8f5ba82.json",
+					"name" : "chromatic_k_nearest_neighbours",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/erwin/Documents/phd/code/implementing_chromatic_knn/implementation/out/build/x64-Release",
+		"source" : "C:/Users/erwin/Documents/phd/code/implementing_chromatic_knn/implementation"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

@@ -42,7 +42,8 @@ bool Scenario::isValid()
 
 FileOutputter::FileOutputter(std::string filename)
 {
-	std::string folder = "C:\\Users\\6224474\\OneDrive - Universiteit Utrecht\\Documents\\code\\implementing_chromatic_knn\\implementation\\results\\";
+	//std::string folder = "C:\\Users\\6224474\\OneDrive - Universiteit Utrecht\\Documents\\code\\implementing_chromatic_knn\\implementation\\results\\";
+	std::string folder = "C:\\Users\\erwin\\Documents\\phd\\code\\implementing_chromatic_knn\\implementation\\results\\";
 	//std::string folder = "/home/ggiezeman/results/";
 
 	std::string finalFileName = folder + filename + ".csv";
@@ -60,7 +61,7 @@ FileOutputter::FileOutputter(std::string filename)
 	else
 	{
 		std::cout << "Creating new file " << finalFileName << std::endl;
-		myfile << "DSType;dataType;numPoints;numColors;gamma;alpha;s;k;rangeSpace;rangeBuildTime;rangeQueryTime;modeSpace;modeBuildTime;modeQueryTime" << std::endl;
+		myfile << "DSType;dataType;numPoints;numColors;gamma;alpha;s;k;rangeSpace;rangeBuildTime;rangeQueryTime;modeSpace;modeBuildTime;modeQueryTime;modeQueryTimeExcludingFirst" << std::endl;
 	}
 }
 
@@ -75,9 +76,9 @@ void FileOutputter::output(Scenario scenario, TestResult result)
 		else
 		{
 			myfile << result.dsType << ";" << scenario.toString(j) << ";" << result.rangeSpace << ";"
-				   << result.rangeBuildTime.count() << ";" << result.rangeAverageQueryTimes[j].count() << ";"
-				   << result.modeSpace << ";" << result.modeBuildTime.count() << ";"
-				   << result.modeAverageQueryTimes[j].count() << std::endl;
+				<< result.rangeBuildTime.count() << ";" << result.rangeAverageQueryTimes[j].count() << ";"
+				<< result.modeSpace << ";" << result.modeBuildTime.count() << ";"
+				<< result.modeAverageQueryTimes[j].count() << ";" << result.modeAverageQueryTimesExcludingFirst[j].count() << std::endl;
 		}
 	}
 }
@@ -86,6 +87,15 @@ ColoredPoint_2::ColoredPoint_2(Point_2 point, Color_ color) : point(point), colo
 
 ColoredPoint_2::ColoredPoint_2(double x, double y, Color_ color) : point(Point_2(x, y)), color(color)
 {
+}
+std::vector<ColoredPoint_2> convertPoints(std::vector<Point_2>& points, std::vector<Color_>& colors)
+{
+	std::vector<ColoredPoint_2> res;
+	for (int i = 0; i < points.size(); i++)
+	{
+		res.push_back(ColoredPoint_2(points[i], colors[i]));
+	}
+	return res;
 }
 
 ColorCount::ColorCount()
@@ -109,11 +119,11 @@ void ColorCount::print()
 	std::cout << "Color " << color << " appears " << count << " times." << std::endl;
 }
 
-bool ColorCount::operator==(const ColorCount &other)
+bool ColorCount::operator==(const ColorCount& other)
 {
 	return this->color == other.color && this->count == other.count;
 }
-bool ColorCount::operator!=(const ColorCount &other)
+bool ColorCount::operator!=(const ColorCount& other)
 {
 	return !operator==(other);
 }
@@ -129,7 +139,7 @@ Range2D::Range2D(double cx, double cy, double radius)
 //	lower(lower), upper(upper){
 // }
 
-ColorCount maxCount(const std::map<Color_, int> &colorCounts)
+ColorCount maxCount(const std::map<Color_, int>& colorCounts)
 {
 	if (colorCounts.size() == 0)
 		return ColorCount();
@@ -177,7 +187,44 @@ std::pair<Dataset2D, Dataset2D> Dataset2D::trainTestSample(double trainFrac, std
 	return std::pair(train, test);
 }
 
-MyRandom::MyRandom() : gen{std::random_device{}()} {} // random seed
+void Dataset2D::writeToIpe(std::string filename, double maxsize) {
+	//std::string folder = "C:\\Users\\6224474\\OneDrive - Universiteit Utrecht\\Documents\\code\\implementing_chromatic_knn\\implementation\\";
+	std::string folder = "C:\\Users\\erwin\\Documents\\phd\\code\\implementing_chromatic_knn\\implementation\\";
+
+	std::ifstream  ipeStart(folder + "src\\shared\\ipeStart.txt", std::ios::binary);
+	std::ofstream  newIpeFile(folder + "figs\\pointsets\\" + filename, std::ios::binary);
+
+	newIpeFile << ipeStart.rdbuf();
+	ipeStart.close();
+
+	std::vector<std::string> colorMapping{ "red", "blue", "lightgreen", "violet", "seagreen", "orange", "brown", "darkblue", "darkcyan", "darkgray", "darkgreen", "darkmagenta", "darkorange", "darkred", "gold", "gray", "green", "lightblue", "lightcyan", "lightgray", "lightgreen", "lightyellow"};
+
+	if (numColors > colorMapping.size())
+		throw std::exception("too many colors to visualize");
+
+
+	double minx = 999999999, miny = 999999999, maxx = -99999999, maxy = -999999999;
+	for (int i = 0; i < points.size(); i++) {
+		minx = std::min(minx, points[i].x());
+		miny = std::min(miny, points[i].y());
+		maxx = std::max(maxx, points[i].x());
+		maxy = std::max(maxy, points[i].y());
+	}
+
+	double xrange = maxx - minx, yrange = maxy - miny;
+	double scale = std::min(maxsize / xrange, maxsize / yrange);
+	for (int i = 0; i < points.size(); i++) {
+		newIpeFile << "<use name=\"mark/disk(sx)\" pos=\"" << (points[i].x() - minx) * scale << " " << (points[i].y() - miny) * scale << "\" size=\"normal\" stroke=\"" << colorMapping[colors[i]] << "\"/>" << std::endl;
+	}
+
+	std::ifstream  ipeEnd(folder + "src\\shared\\ipeEnd.txt", std::ios::binary);
+
+	newIpeFile << ipeEnd.rdbuf();
+	ipeEnd.close();
+	newIpeFile.close();
+}
+
+MyRandom::MyRandom() : gen{ std::random_device{}() } {} // random seed
 MyRandom::MyRandom(int seed) : gen(seed) {}			  // given seed
 
 int MyRandom::nextInt(int min, int max)

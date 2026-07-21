@@ -5,14 +5,31 @@
 #include <functional>
 #include <algorithm>
 
-// im just testing stuff out at this point, but macros are fun!
-#define casted_malloc(type) (type)malloc(sizeof(type))
-#define for_each(pointer_name, items) for(auto pointer_name = items.begin(); pointer_name < items.end(); pointer_name++)
-//#define DEBUG_PRINT
+RangeQueryDS1D::RangeQueryDS1D(std::vector<double>& points) :
+	points(points) {
+}
+
+Range RangeQueryDS1D::rangeQuery(double point, int k) {
+	auto lower = binarySearch(points.begin(), points.end(), point, k, true);
+	auto upper = binarySearch(points.rbegin(), points.rend(), point, k, false);
+
+	if (lower.right - lower.left == k) return lower;
+	else if (upper.right - upper.left == k) return upper;
+	std::cout << "not possible";
+	for (double p : points)
+		std::cout << p << ", ";
+	std::cout << std::endl;
+	std::cout << point << ", " << k << std::endl;
+	std::cout << lower.left << ", " << lower.right << std::endl;
+	std::cout << upper.left << ", " << upper.right << std::endl;
+	throw std::runtime_error("not possible");
+}
+
+long RangeQueryDS1D::getMemoryUsage() {
+	return sizeof(double) * points.size();
+}
 
 namespace DS {
-	// Reference implementation
-	// O(n lg n) (sorting entire input array by distance to q)
 	Range naiveRangeQuery(std::vector<double>& points, KQuery query) {
 		// copy array for in place operation
 		std::vector<double> copy(points);
@@ -39,20 +56,5 @@ namespace DS {
 			}
 		}
 		return Range{ start, end };
-	}
-
-	Side flip(Side side) {
-		return side == Left ? Right : Left;
-	}
-
-	Color__ flip(Color__ color) {
-		return color == Red ? Blue : Red;
-	}
-
-	Range get_range(std::vector<double>& input, double q, int k, int index) {
-		if (input[index] > q)
-			return { index + 1 - k, index + 1 };
-		else
-			return { index, index + k };
 	}
 }

@@ -1,0 +1,202 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{cover1967nearest}
+\citation{tang2014data}
+\citation{chromatic_knn2025}
+\citation{chan2014modeQuery}
+\citation{chromatic_knn2025}
+\citation{chan2014modeQuery}
+\citation{gupta1995colorReporting}
+\citation{janardan1993generalizedIntersectionSearching}
+\citation{gupta2018ColoredSearchingSurvey}
+\citation{misra1982finding}
+\citation{yu2012processing}
+\citation{rahul2011efficient}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction.}{2}{section.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces A small colored point set and query point $q$; left with the $L_2$ distance measure, and right with the $L_\infty $ distance measure. For both $k = 2$ would yield green, while $k = 7$ yields blue.}}{2}{figure.3}\protected@file@percent }
+\newlabel{fig:introFigure}{{1.1}{2}{A small colored point set and query point $q$; left with the $L_2$ distance measure, and right with the $L_\infty $ distance measure. For both $k = 2$ would yield green, while $k = 7$ yields blue}{figure.3}{}}
+\newlabel{fig:introFigure@cref}{{[figure][1][1]1.1}{[1][2][]2}}
+\@writefile{toc}{\contentsline {subparagraph}{The problem setting.}{2}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Research Questions.}{2}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Contributions.}{2}{section*.10}\protected@file@percent }
+\citation{chromatic_knn2025}
+\citation{chan2014modeQuery}
+\citation{chromatic_knn2025}
+\citation{code}
+\citation{krizanc2005modeSets}
+\citation{krizanc2005modeSets}
+\citation{chan2014modeQuery}
+\citation{chromatic_knn2025}
+\citation{chan2014modeQuery}
+\citation{chan2014modeQuery}
+\@writefile{toc}{\contentsline {subparagraph}{Overview and organization.}{3}{section*.11}\protected@file@percent }
+\newlabel{sec:Mode_finding}{{2}{3}{Mode finding}{section.12}{}}
+\newlabel{sec:Mode_finding@cref}{{[section][2][]2}{[1][3][]3}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Mode finding.}{3}{section.12}\protected@file@percent }
+\@writefile{thm}{\contentsline {lemma}{{Lemma}{2.1}{Krizanc, Morin, and Smid~\cite {krizanc2005modeSets}}}{3}{theorem.13}\protected@file@percent }
+\newlabel{lem:modeColors}{{2.1}{3}{Mode finding}{theorem.13}{}}
+\newlabel{lem:modeColors@cref}{{[lemma][1][2]2.1}{[1][3][]3}}
+\newlabel{sub:A_grid_based_data_structure}{{2.1}{3}{A block based data structure}{subsection.14}{}}
+\newlabel{sub:A_grid_based_data_structure@cref}{{[subsection][1][2]2.1}{[1][3][]3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}A block based data structure.}{3}{subsection.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{A block mode data structure.}{3}{section*.15}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces  An example set of $9$ points with $s = 3$ blocks; let $r,g,b$ be the colors red, green, and blue, respectively. Then $\texttt  {blockModes} = \big  [ \begin  {smallmatrix} b & r & r \\ - & r & g \\ - & - & g \end  {smallmatrix} \big  ] $, $\texttt  {blockModeFrequencies} = \big  [ \begin  {smallmatrix} 2 & 3 & 3 \\ - & 2 & 3 \\ - & - & 2 \end  {smallmatrix} \big  ] $, $\texttt  {colorIndices[r]} = [ 0, 4, 5]$, $\texttt  {colorIndices[g]} = [ 3, 6, 8]$, $\texttt  {colorIndices[b]} = [ 1, 2, 7]$, and $\texttt  {rankInColor} = [ 0, 0, 1, 0, 1, 2, 1, 2, 2]$. }}{3}{figure.16}\protected@file@percent }
+\newlabel{fig:1Dexample}{{2.1}{3}{An example set of $9$ points with $s = 3$ blocks; let $r,g,b$ be the colors red, green, and blue, respectively. Then $\texttt {blockModes} = \big [ \begin {smallmatrix} b & r & r \\ - & r & g \\ - & - & g \end {smallmatrix} \big ] $, $\texttt {blockModeFrequencies} = \big [ \begin {smallmatrix} 2 & 3 & 3 \\ - & 2 & 3 \\ - & - & 2 \end {smallmatrix} \big ] $, $\texttt {colorIndices[r]} = [ 0, 4, 5]$, $\texttt {colorIndices[g]} = [ 3, 6, 8]$, $\texttt {colorIndices[b]} = [ 1, 2, 7]$, and $\texttt {rankInColor} = [ 0, 0, 1, 0, 1, 2, 1, 2, 2]$}{figure.16}{}}
+\newlabel{fig:1Dexample@cref}{{[figure][1][2]2.1}{[1][3][]3}}
+\@writefile{toc}{\contentsline {subparagraph}{Answering a query $[a,b]$.}{3}{section*.18}\protected@file@percent }
+\citation{chromatic_knn2025}
+\citation{chazelle1993cutting}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces  A query $Q$ with its span in green, and its generalized pre- and postfix in gray. }}{4}{figure.20}\protected@file@percent }
+\newlabel{fig:spanExample}{{2.2}{4}{A query $Q$ with its span in green, and its generalized pre- and postfix in gray}{figure.20}{}}
+\newlabel{fig:spanExample@cref}{{[figure][2][2]2.2}{[1][4][]4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Extending to higher dimensions.}{4}{subsubsection.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{The data structure.}{4}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Answering a query $Q$.}{4}{section*.23}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces A pyramid formed by a square $Q_1$, and an upside down pyramid formed by a point $p_2$. }}{4}{figure.25}\protected@file@percent }
+\newlabel{fig:thijsMethodPyramid}{{2.3}{4}{A pyramid formed by a square $Q_1$, and an upside down pyramid formed by a point $p_2$}{figure.25}{}}
+\newlabel{fig:thijsMethodPyramid@cref}{{[figure][3][2]2.3}{[1][4][]4}}
+\newlabel{sub:A_cutting_based_data_structure}{{2.2}{4}{A cutting based data structure}{subsection.24}{}}
+\newlabel{sub:A_cutting_based_data_structure@cref}{{[subsection][2][2]2.2}{[1][4][]4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}A cutting based data structure.}{4}{subsection.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{The data structure.}{4}{section*.27}\protected@file@percent }
+\citation{edelsbrunner86const_arran_lines_hyper_applic}
+\citation{chromatic_knn2025}
+\@writefile{toc}{\contentsline {subparagraph}{Answering a query $Q' = (x,y,r)$.}{5}{section*.28}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Adaptation for $\mathbb  {R}\xspace  ^1$.}{5}{section*.29}\protected@file@percent }
+\newlabel{sec:The_grid_data_structure_for_queries_with_hypercubes}{{3}{5}{The grid data structure for range mode queries with \texorpdfstring {$L_{\infty }$}{L∞} disks}{section.30}{}}
+\newlabel{sec:The_grid_data_structure_for_queries_with_hypercubes@cref}{{[section][3][]3}{[1][5][]5}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}The grid data structure for range mode queries with $L_{\infty }$ disks.}{5}{section.30}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces There is no square for which $G$ is the largest grid-rectangle contained in it.}}{5}{figure.31}\protected@file@percent }
+\newlabel{fig:simplifiedConstructionGridNoSquare}{{3.1}{5}{There is no square for which $G$ is the largest grid-rectangle contained in it}{figure.31}{}}
+\newlabel{fig:simplifiedConstructionGridNoSquare@cref}{{[figure][1][3]3.1}{[1][5][]5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces A $d$-dimensional grid hyperplane $h: x_i = a$ creates two $(d+1)$-dimensional hyperplanes $h_1,h_2$. A square $Q$ intersects $h$ if and only if its corresponding point $Q'$ lies above $h_1$ and $h_2$.}}{5}{figure.33}\protected@file@percent }
+\newlabel{fig:fewSquareSpans}{{3.2}{5}{A $d$-dimensional grid hyperplane $h: x_i = a$ creates two $(d+1)$-dimensional hyperplanes $h_1,h_2$. A square $Q$ intersects $h$ if and only if its corresponding point $Q'$ lies above $h_1$ and $h_2$}{figure.33}{}}
+\newlabel{fig:fewSquareSpans@cref}{{[figure][2][3]3.2}{[1][5][]5}}
+\@writefile{toc}{\contentsline {subparagraph}{Reducing the space usage.}{5}{section*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Preprocessing.}{5}{section*.36}\protected@file@percent }
+\citation{chromatic_knn2025}
+\citation{code}
+\citation{cgal:library}
+\citation{cgal:arrangements}
+\citation{chan2014modeQuery}
+\citation{chromatic_knn2025}
+\citation{chromatic_knn2025}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces A triangle unit disk in $\mathbb  {R}\xspace  ^2$ that is the intersection of three halfspaces, and the irregular grid based on this unit disk where each strip contains two points.}}{6}{figure.38}\protected@file@percent }
+\newlabel{fig:constantComplexityUnitDisk}{{3.3}{6}{A triangle unit disk in $\R ^2$ that is the intersection of three halfspaces, and the irregular grid based on this unit disk where each strip contains two points}{figure.38}{}}
+\newlabel{fig:constantComplexityUnitDisk@cref}{{[figure][3][3]3.3}{[1][6][]6}}
+\@writefile{toc}{\contentsline {subparagraph}{Other distance metrics.}{6}{section*.37}\protected@file@percent }
+\newlabel{thmt@@gridforCubes@data}{{\def \theequation {3.\@arabic {\c@equation }}\def \theHequation {(restate \theHthmt@dummyctr )3.\@arabic {\c@equation }}\setcounter {equation}{0}}{6}{Other distance metrics}{figure.38}{}}
+\newlabel{thmt@@gridforCubes@data@cref}{{[section][3][]3}{[1][6][]6}}
+\@writefile{thm}{\contentsline {theorem}{{Theorem}{3.1}{}}{6}{theorem.40}\protected@file@percent }
+\newlabel{thmt@@gridforCubes}{{3.1}{6}{Other distance metrics}{theorem.40}{}}
+\newlabel{thmt@@gridforCubes@cref}{{[theorem][1][3]3.1}{[1][6][]6}}
+\newlabel{thm:grid_for_cubes}{{3.1}{6}{Other distance metrics}{theorem.40}{}}
+\newlabel{thm:grid_for_cubes@cref}{{[theorem][1][3]3.1}{[1][6][]6}}
+\newlabel{sec:experimental_setup}{{4}{6}{Experimental setup}{section.41}{}}
+\newlabel{sec:experimental_setup@cref}{{[section][4][]4}{[1][6][]6}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experimental setup.}{6}{section.41}\protected@file@percent }
+\newlabel{sub:implementedDatastructs}{{4.1}{6}{Implemented mode finding data structures}{subsection.42}{}}
+\newlabel{sub:implementedDatastructs@cref}{{[subsection][1][4]4.1}{[1][6][]6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Implemented mode finding data structures.}{6}{subsection.42}\protected@file@percent }
+\newlabel{sec:Range_finding}{{4.2}{6}{Implemented range finding data structures}{subsection.45}{}}
+\newlabel{sec:Range_finding@cref}{{[subsection][2][4]4.2}{[1][6][]6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Implemented range finding data structures.}{6}{subsection.45}\protected@file@percent }
+\citation{OpenStreetMap}
+\citation{QGIS_software}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces The worst case space usage and query times of the different implemented methods.}}{7}{table.43}\protected@file@percent }
+\newlabel{tab:theoreticalOverview}{{4.1}{7}{The worst case space usage and query times of the different implemented methods}{table.43}{}}
+\newlabel{tab:theoreticalOverview@cref}{{[table][1][4]4.1}{[1][6][]7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Measurements.}{7}{subsection.46}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Data sets.}{7}{subsection.47}\protected@file@percent }
+\citation{code}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Left: a set of $\num {10000}$ points with $6$ uniformly random colors. Right: a set of $\num {1000}$ points with grouped colors, with $\alpha = 0.9$ and $\gamma = 10$. }}{8}{figure.48}\protected@file@percent }
+\newlabel{fig:groupedVsUniform}{{4.1}{8}{Left: a set of $\num {10000}$ points with $6$ uniformly random colors. Right: a set of $\num {1000}$ points with grouped colors, with $\alpha = 0.9$ and $\gamma = 10$}{figure.48}{}}
+\newlabel{fig:groupedVsUniform@cref}{{[figure][1][4]4.1}{[1][7][]8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Queries.}{8}{subsection.56}\protected@file@percent }
+\newlabel{sec:Experimental_Results}{{5}{8}{Experimental results and analysis}{section.57}{}}
+\newlabel{sec:Experimental_Results@cref}{{[section][5][]5}{[1][8][]8}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental results and analysis.}{8}{section.57}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Practicality of sublinear methods.}{8}{subsection.58}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces A map colored by terrain-type, then discretized (the actual colors after discretization are randomized).}}{8}{figure.50}\protected@file@percent }
+\newlabel{fig:usp}{{4.2}{8}{A map colored by terrain-type, then discretized (the actual colors after discretization are randomized)}{figure.50}{}}
+\newlabel{fig:usp@cref}{{[figure][2][4]4.2}{[1][7][]8}}
+\@writefile{toc}{\contentsline {subparagraph}{Cuttings in practice.}{8}{section*.59}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Comparing \texttt  {grid}\xspace  and naive methods.}{8}{section*.62}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces The parameters for the 1D experiments.}}{9}{table.52}\protected@file@percent }
+\newlabel{tab:exp1D}{{4.2}{9}{The parameters for the 1D experiments}{table.52}{}}
+\newlabel{tab:exp1D@cref}{{[table][2][4]4.2}{[1][8][]9}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces The parameters for the 2D experiments.}}{9}{table.54}\protected@file@percent }
+\newlabel{tab:exp2D}{{4.3}{9}{The parameters for the 2D experiments}{table.54}{}}
+\newlabel{tab:exp2D@cref}{{[table][3][4]4.3}{[1][8][]9}}
+\@writefile{toc}{\contentsline {subparagraph}{(In)dependence of $k$}{9}{section*.67}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Ratio between range-finding and mode-finding}{9}{section*.76}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Parameter choice.}{9}{subsection.77}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Dependency on data distribution.}{9}{subsection.78}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Varying $\phi $.}{9}{section*.79}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Query time, build time, and space usage of the five 1D methods, using $k = \num {100000}$ and $\phi = \num {50000}$. }}{10}{figure.60}\protected@file@percent }
+\newlabel{fig:1D_comparison}{{5.1}{10}{Query time, build time, and space usage of the five 1D methods, using $k = \num {100000}$ and $\phi = \num {50000}$}{figure.60}{}}
+\newlabel{fig:1D_comparison@cref}{{[figure][1][5]5.1}{[1][8][]10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Query time and space usage for the 2D structures and the range-finding structure, using $k = \num {100000}$ and $\phi = \num {50000}$. }}{10}{figure.63}\protected@file@percent }
+\newlabel{fig:2D_comparison}{{5.2}{10}{Query time and space usage for the 2D structures and the range-finding structure, using $k = \num {100000}$ and $\phi = \num {50000}$}{figure.63}{}}
+\newlabel{fig:2D_comparison@cref}{{[figure][2][5]5.2}{[1][9][]10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Query time \texttt  {grid}\xspace  structure (left) and the \texttt  {rangeTrees}\xspace  structure (right) for varying $k$ values, using $\phi = \num {50000}$.}}{10}{figure.66}\protected@file@percent }
+\newlabel{fig:2D_detail}{{5.3}{10}{Query time \grid structure (left) and the \rangeTrees structure (right) for varying $k$ values, using $\phi = \num {50000}$}{figure.66}{}}
+\newlabel{fig:2D_detail@cref}{{[figure][3][5]5.3}{[1][9][]10}}
+\@writefile{toc}{\contentsline {subparagraph}{Varying $\alpha $.}{10}{section*.80}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Real datasets.}{10}{section*.81}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Concluding remarks.}{10}{section.84}\protected@file@percent }
+\@writefile{toc}{\contentsline {subparagraph}{Future work.}{10}{section*.85}\protected@file@percent }
+\bibstyle{siamplain}
+\bibdata{bibliography}
+\bibcite{code}{1}
+\bibcite{chan2014modeQuery}{2}
+\bibcite{chazelle1993cutting}{3}
+\bibcite{cover1967nearest}{4}
+\bibcite{edelsbrunner86const_arran_lines_hyper_applic}{5}
+\bibcite{gupta2018ColoredSearchingSurvey}{6}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Query time of the \texttt  {grid}\xspace  structure as a function of $k$, using $n = \num {500000}$ and $\phi = \num {50000}$. The \texttt  {report}\xspace  graph is simply a straight line, and has been cut.}}{11}{figure.68}\protected@file@percent }
+\newlabel{fig:kDependency}{{5.4}{11}{Query time of the \grid structure as a function of $k$, using $n = \num {500000}$ and $\phi = \num {50000}$. The \report graph is simply a straight line, and has been cut}{figure.68}{}}
+\newlabel{fig:kDependency@cref}{{[figure][4][5]5.4}{[1][9][]11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Query time of the \texttt  {grid}\xspace  structure (left) and the \texttt  {rangeTrees}\xspace  structure (right) as a function of $\phi $, using $n = \num {250000}$.}}{11}{figure.71}\protected@file@percent }
+\newlabel{fig:phiDependency}{{5.5}{11}{Query time of the \grid structure (left) and the \rangeTrees structure (right) as a function of $\phi $, using $n = \num {250000}$}{figure.71}{}}
+\newlabel{fig:phiDependency@cref}{{[figure][5][5]5.5}{[1][9][]11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Space usage of the \texttt  {grid}\xspace  structure as a function of $s$, using $n = \num {250000}$ and $\phi = \num {50000}$, split into $s$-dependent and $s$-independent space.}}{11}{figure.72}\protected@file@percent }
+\newlabel{fig:sDependency}{{5.6}{11}{Space usage of the \grid structure as a function of $s$, using $n = \num {250000}$ and $\phi = \num {50000}$, split into $s$-dependent and $s$-independent space}{figure.72}{}}
+\newlabel{fig:sDependency@cref}{{[figure][6][5]5.6}{[1][9][]11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Query time of the \texttt  {grid}\xspace  structure (left) and the \texttt  {rangeTrees}\xspace  structure (right) as a function of $\alpha $, using $n = \num {250000}$ and $\phi = \num {50000}$.}}{11}{figure.75}\protected@file@percent }
+\newlabel{fig:alphaDependency}{{5.7}{11}{Query time of the \grid structure (left) and the \rangeTrees structure (right) as a function of $\alpha $, using $n = \num {250000}$ and $\phi = \num {50000}$}{figure.75}{}}
+\newlabel{fig:alphaDependency@cref}{{[figure][7][5]5.7}{[1][9][]11}}
+\bibcite{gupta1995colorReporting}{7}
+\bibcite{janardan1993generalizedIntersectionSearching}{8}
+\bibcite{krizanc2005modeSets}{9}
+\bibcite{misra1982finding}{10}
+\bibcite{OpenStreetMap}{11}
+\bibcite{QGIS_software}{12}
+\bibcite{rahul2011efficient}{13}
+\bibcite{tang2014data}{14}
+\bibcite{cgal:library}{15}
+\bibcite{chromatic_knn2025}{16}
+\bibcite{cgal:arrangements}{17}
+\bibcite{yu2012processing}{18}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Query time of the \texttt  {grid}\xspace  structure in 2D on subsets of a real dataset (OSM-bbg) with $n = \num {66870}$ and $\phi = 11$ (left), and on synthetic datasets with uniform random colors (middle), and on synthetic datasets with grouped colors with $\alpha = 1$ and $\gamma = \num {1000}$ (right).}}{12}{figure.82}\protected@file@percent }
+\newlabel{fig:realData}{{5.8}{12}{Query time of the \grid structure in 2D on subsets of a real dataset (OSM-bbg) with $n = \num {66870}$ and $\phi = 11$ (left), and on synthetic datasets with uniform random colors (middle), and on synthetic datasets with grouped colors with $\alpha = 1$ and $\gamma = \num {1000}$ (right)}{figure.82}{}}
+\newlabel{fig:realData@cref}{{[figure][8][5]5.8}{[1][10][]12}}
+\newlabel{app:Omitted_Proofs}{{7}{13}{Omitted Proofs}{section.87}{}}
+\newlabel{app:Omitted_Proofs@cref}{{[section][7][]7}{[1][13][]13}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Omitted Proofs.}{13}{theorem.88}\protected@file@percent }
+\@writefile{thm}{\contentsline {theorem}{{Theorem}{3.1}{}}{13}{theorem.88}\protected@file@percent }
+\@writefile{thm}{\contentsline {proof}{{Proof}{1}{}}{13}{proof.89}\protected@file@percent }
+\gdef \@abspage@last{13}

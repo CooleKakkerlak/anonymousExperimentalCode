@@ -17,6 +17,6 @@ namespace TestFuncs {
 	int countColors(std::vector<Color_>& colors);
 
 	std::vector<int> range(int start, int stop, int stepSize);
-	std::vector<Scenario> generateScenarios(std::vector<int> ns, std::vector<int> ss, std::vector<int> ks, std::vector<int> numColors, double defaultPower, std::vector<double> alphas = { 0 }, std::vector<int> gammas = { 0 });
+	std::vector<Scenario> generateScenarios(std::vector<int> ns, std::vector<int> ss, std::vector<int> ks, std::vector<int> numColors, double defaultPower, std::vector<double> alphas = { 0 }, std::vector<int> gammas = { 0 }, std::vector<int> checkerboardStrips = { 0 });
 	std::vector<Scenario> generateRealScenarios(std::string filename, int d0, int d1, std::vector<double> trainFracs, std::vector<int> ks);
 }

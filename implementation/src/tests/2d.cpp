@@ -79,6 +79,39 @@ std::vector<Color_> Tester2D::generateGroupedColors(const Scenario& scenario, st
 	return colors;
 }
 
+std::vector<Color_> Tester2D::generateCheckerboardColors(Scenario& scenario, std::vector<Point_2> points)
+{
+	std::vector<Color_> colors;
+
+	std::vector<double> xsorted, ysorted;
+	for (Point_2 p : points) {
+		xsorted.push_back(p.x());
+		ysorted.push_back(p.y());
+	}
+	std::sort(xsorted.begin(), xsorted.end());
+	std::sort(ysorted.begin(), ysorted.end());
+
+	std::vector<double> xstripBoundaries, ystripBoundaries;
+	for (int i = 1; i < scenario.checkerStrips; i++) {
+		xstripBoundaries.push_back(xsorted[i * (double)(points.size() / scenario.checkerStrips)]);
+		ystripBoundaries.push_back(ysorted[i * (double)(points.size() / scenario.checkerStrips)]);
+	}
+
+	std::map<std::tuple<int, int>, Color_> colorMapping;
+	int nrColors = 0;
+	for (int i = 0; i < points.size(); i++) {
+		int stripx = std::distance(xstripBoundaries.begin(), std::lower_bound(xstripBoundaries.begin(), xstripBoundaries.end(), points[i].x()));
+		int stripy = std::distance(ystripBoundaries.begin(), std::lower_bound(ystripBoundaries.begin(), ystripBoundaries.end(), points[i].y()));
+		if (!colorMapping.count(tuple(stripx, stripy))) {
+			colorMapping[tuple(stripx, stripy)] = nrColors++;
+		}
+		colors.push_back(colorMapping[tuple(stripx, stripy)]);
+	}
+	scenario.numColors = nrColors;
+
+	return colors;
+}
+
 std::vector<vector<KQuery2D>> Tester2D::generateUniformKQueries(const Scenario& scenario)
 {
 	std::vector<vector<KQuery2D>> allQueries;
@@ -144,79 +177,147 @@ namespace
 	}
 }
 
+//verify correctness of both range finding and mode finding
 void Tester2D::checkCorrectness()
 {
+	bool debugTimes = false;
+
 	std::cout << "Checking 2D correctness..." << std::endl;
 
-	for (int i = 11; i < 17; i++)
+	for (int i = 3; i < 25; i++)
 	{
 		Scenario scenario{};
 		scenario.synthetic = true;
 		scenario.numPoints = std::pow(2, i);
-		scenario.numColors = std::min(scenario.numPoints, std::max(2, scenario.numPoints / 100));
-		scenario.min = 0;
-		scenario.max = 10;
+		std::cout << "n = " << scenario.numPoints << " (phi = ";
 
-		scenario.ks = { 1, 10, 50, 100, 1000, 5000, 9999, 10000 };
-		scenario.gamma = 0;
-		scenario.alpha = 0;
-		scenario.numQueries = 10000;
+		int nrColorRuns = 5;
+		for (int j = 1; j <= nrColorRuns; j++) {
+			scenario.numColors = std::max(scenario.numPoints * j / nrColorRuns, 1);
+			scenario.min = 0;
+			scenario.max = 10;
 
-		scenario.isValid(); // clear out invalid k values
+			std::cout << scenario.numColors << ",";
 
-		std::cout << "run " << i << ", n = " << scenario.numPoints << std::endl;
-		vector<Point_2> points = generateUniformPoints(scenario);
-		vector<Color_> colors = generateGroupedColors(scenario, points);
+			scenario.ks = { 1, 10, 50, 100, 1000, 5000, 10000, 30000, 100000, 300000, 800000 };
+			scenario.gamma = 0;
+			scenario.alpha = 0;
+			scenario.numQueries = 10000;
 
-		std::vector<std::vector<KQuery2D>> allQueries = generateUniformKQueries(scenario);
-		std::vector<Range2D> rangeQueries;
+			scenario.isValid(); // clear out invalid k values
 
-		RangeQueryDS2D rangeDS(points, colors);
+			vector<Point_2> points = generateUniformPoints(scenario);
+			vector<Color_> colors = generateGroupedColors(scenario, points);
 
-		std::cout << "Range queries.. (";
-		int nrQuery = 0;
-		for (std::vector<KQuery2D>& queries : allQueries)
-			for (KQuery2D& query : queries)
-			{
-				auto naiveRadius = naive_range(points, query.point, query.k);
-				auto smartRadius = rangeDS.query_k_nearest(query.point, query.k);
-				Range2D range(query.point, naiveRadius);
-				int count = rangeDS.tree.rangeCount(range);
-				if (std::abs(naiveRadius - smartRadius) > constants::epsilon || count != query.k)
-					throw std::runtime_error("2D range finding incorrect");
-				rangeQueries.push_back(range);
-				if (nrQuery++ % (scenario.ks.size() * scenario.numQueries / 10) == 0)
-					std::cout << (int)((double)nrQuery / (scenario.ks.size() * scenario.numQueries) * 100) << "%, ";
-			}
+			std::vector<std::vector<KQuery2D>> allQueries = generateUniformKQueries(scenario);
+			std::vector<Range2D> rangeQueries;
 
-		std::cout << ") succesful." << std::endl
-			<< "Testing mode queries.. (";
-		nrQuery = 0;
-		std::vector<std::unique_ptr<AAS2DModeDS>> datastructs;
-		datastructs.push_back(std::make_unique<AAS2DModeReportDS>(points, colors));
-		datastructs.push_back(std::make_unique<AAS2DModePerColorDS>(points, colors, scenario.numColors));
-		datastructs.push_back(std::make_unique<AAS2DModeAmcDS>(points, colors, RustDSType::GridNoColor, (int)std::pow(colors.size(), 1.0 / 3)));
-		datastructs.push_back(std::make_unique<AAS2DModeAmcDS>(points, colors, RustDSType::GridSelectColor, (int)std::pow(colors.size(), 1.0 / 3)));
-		datastructs.push_back(std::make_unique<AAS2DModeAmcDS>(points, colors, RustDSType::GridColumnColor, (int)std::pow(colors.size(), 1.0 / 3)));
-		datastructs.push_back(std::make_unique<AAS2DModeAmcDS>(points, colors, RustDSType::GridSortedColor, (int)std::pow(colors.size(), 1.0 / 3)));
-		for (Range2D& rangeQuery : rangeQueries)
-		{
-			auto expected = correct_answers(rangeQuery, rangeDS.tree);
-			for (auto& ds : datastructs)
-			{
-				auto res = ds->queryMode(rangeQuery);
-				if (!is_correct(res, expected.first, expected.second))
+			RangeQueryDS2D rangeDS(points, colors);
+
+			//std::cout << "Range queries.. (";
+			int nrQuery = 0;
+			for (std::vector<KQuery2D>& queries : allQueries)
+				for (KQuery2D& query : queries)
 				{
-					std::clog << "Error in algorithm " << ds->getName() << "\n";
-					throw runtime_error("Incorrect answer 1");
+					auto naiveRadius = naive_range(points, query.point, query.k);
+					auto smartRadius = rangeDS.query_k_nearest(query.point, query.k);
+					Range2D range(query.point, naiveRadius);
+					int count = rangeDS.tree.rangeCount(range);
+					if (std::abs(naiveRadius - smartRadius) > constants::epsilon || count != query.k) {
+						std::cout << "2D range finding incorrect";
+						throw std::runtime_error("2D range finding incorrect");
+					}
+					rangeQueries.push_back(range);
+					//if (nrQuery++ % (scenario.ks.size() * scenario.numQueries / 10) == 0)
+					//	std::cout << (int)((double)nrQuery / (scenario.ks.size() * scenario.numQueries) * 100) << "%, ";
 				}
-				// checkAnswer(rangeQuery, res, colors, rangeDS.tree);
+
+			Timer timer;
+
+			//std::cout << ") succesful." << std::endl
+			//	<< "Testing mode queries.. (";
+			nrQuery = 0;
+			int s = (int)std::pow(colors.size(), 1.0 / 3);
+			std::vector<std::unique_ptr<AAS2DModeDS>> datastructs;
+			datastructs.push_back(std::make_unique<AAS2DModeReportDS>(points, colors));
+			datastructs.push_back(std::make_unique<AAS2DModePerColorDS>(points, colors, scenario.numColors));
+			datastructs.push_back(std::make_unique<AAS2DModeGridDS>(points, colors, s, scenario.numColors));
+			//datastructs.push_back(std::make_unique<AAS2DModeAmcDS>(points, colors, RustDSType::GridNoColor, s));
+			//datastructs.push_back(std::make_unique<AAS2DModeAmcDS>(points, colors, RustDSType::GridSelectColor, s));
+			//datastructs.push_back(std::make_unique<AAS2DModeAmcDS>(points, colors, RustDSType::GridColumnColor, s));
+			//datastructs.push_back(std::make_unique<AAS2DModeAmcDS>(points, colors, RustDSType::GridSortedColor, s));
+			for (Range2D& rangeQuery : rangeQueries)
+			{
+				auto expected = correct_answers(rangeQuery, rangeDS.tree);
+				for (auto& ds : datastructs)
+				{
+					timer.reset();
+					auto res = ds->queryMode(rangeQuery);
+					if (debugTimes) std::cout << "(" << ds->getName() << ": " << timer.sinceStart().count() << ") ";
+					if (!is_correct(res, expected.first, expected.second))
+					{
+						std::cout << "Error in algorithm " << ds->getName() << "\n";
+						throw runtime_error("Incorrect answer 1");
+					}
+					checkAnswer(rangeQuery, res, colors, rangeDS.tree);
+				}
+				if (debugTimes) std::cout << std::endl;
+				//if (nrQuery++ % (rangeQueries.size() / 10) == 0)
+				//	std::cout << (int)((double)nrQuery / rangeQueries.size() * 100) << "%, ";
 			}
-			if (nrQuery++ % (rangeQueries.size() / 10) == 0)
-				std::cout << (int)((double)nrQuery / rangeQueries.size() * 100) << "%, ";
 		}
 		std::cout << ") succesful" << std::endl;
 	}
+}
+
+//create ipe files to visualize the different types of point sets
+void Tester2D::visualizePointsets() {
+	Scenario scenario;
+	scenario.numPoints = 1000;
+	scenario.numColors = 6;
+	scenario.alpha = 0;
+	scenario.gamma = 0;
+	scenario.min = 100;
+	scenario.max = 200;
+	scenario.synthetic = true;
+
+	Dataset2D data;
+	data.points = generateUniformPoints(scenario);
+	data.colors = TestFuncs::generateUniformColors(scenario, random);
+	data.writeToIpe("uniform.ipe");
+
+	scenario.gamma = 10;
+	scenario.alpha = .9;
+	data.points = generateUniformPoints(scenario);
+	data.colors = generateGroupedColors(scenario, data.points);
+	data.writeToIpe("grouped.ipe");
+
+	scenario.checkerStrips = 3;
+	data.points = generateUniformPoints(scenario);
+	data.colors = generateCheckerboardColors(scenario, data.points);
+	data.writeToIpe("checker.ipe");
+
+
+	scenario.synthetic = false;
+
+	scenario.filename = "osm/1.points";
+	data = DataReader::readPointsFile(scenario, random);
+	data.trainTestSample(0.1, random.gen).first.writeToIpe("1.ipe", 500);
+
+	scenario.filename = "osm/bbg.points";
+	data = DataReader::readPointsFile(scenario, random);
+	data.trainTestSample(0.1, random.gen).first.writeToIpe("bbg.ipe", 500);
+
+	scenario.d0 = 1;
+	scenario.d1 = 3;
+	scenario.filename = "openML/php3CTpvq.arff";
+	data = DataReader::readOpenML(scenario, random);
+	data.trainTestSample(0.01, random.gen).first.writeToIpe("php3CTpvq.ipe", 500);
+
+
+	scenario.filename = "temperature/temperature-11-06-2024.points";
+	data = DataReader::readPointsFile(scenario, random);
+	data.trainTestSample(1, random.gen).first.writeToIpe("temperature-11-06-2024.ipe", 500);
 }
 
 TestResult Tester2D::runScenario(Scenario& scenario, std::function<std::unique_ptr<AAS2DModeDS>(std::vector<Point_2>&, std::vector<Color_>&, Scenario&)> makeDS)
@@ -229,6 +330,8 @@ TestResult Tester2D::runScenario(Scenario& scenario, std::function<std::unique_p
 
 		if (scenario.gamma == 0 || scenario.alpha == 0)
 			data.colors = TestFuncs::generateUniformColors(scenario, random);
+		else if (scenario.checkerStrips != 0)
+			data.colors = generateCheckerboardColors(scenario, data.points);
 		else
 			data.colors = generateGroupedColors(scenario, data.points);
 	}
@@ -284,7 +387,7 @@ TestResult Tester2D::runDsOnPoints(Scenario& scenario, Dataset2D data, std::func
 	TestResult res{};
 
 	// build the range DS
-	Timer timer{};
+	Timer timer{}, timer2{};
 	RangeQueryDS2D rangeDS(data.points, data.colors);
 	res.rangeBuildTime = timer.reset();
 	res.rangeSpace = rangeDS.get2DRangeMemoryUsage();
@@ -298,67 +401,69 @@ TestResult Tester2D::runDsOnPoints(Scenario& scenario, Dataset2D data, std::func
 	res.dsType = ds->getName();
 	std::cout << res.dsType;
 
-	//std::map<int, UuQueryStatistics> averages;
-	//for (int k : scenario.ks) averages[k] = UuQueryStatistics();
-	//AAS2DModeAmcDS* amcDS = dynamic_cast<AAS2DModeAmcDS*>(ds.get());
-	//amcDS->solver->set_statistics_gathering(true);
-
 	for (std::vector<KQuery2D>& queries : allQueries)
 	{
 		std::vector<Range2D> rangeQueries;
-		//int k = queries[0].k;
 		timer.reset();
 		for (KQuery2D& query : queries)
 		{
 			double queryRadius = rangeDS.query_k_nearest(query.point, query.k);
 			Range2D queryRange(query.point, queryRadius);
 			rangeQueries.push_back(queryRange);
+
 		}
 		res.rangeAverageQueryTimes.push_back(timer.reset() / scenario.numQueries);
+
+		int nrQueries = 0;
+		int fractionToDiscard = 10;
 		for (Range2D& query : rangeQueries)
 		{
 			ColorCount ans = ds->queryMode(query);
 
-			//auto stats = amcDS->solver->get_last_statistics();
-			//averages[k].cell_time += stats->cell_time;
-			//averages[k].range_search_time += stats->range_search_time;
-			//averages[k].relevant_colors += stats->relevant_colors;
-			//averages[k].slab_time += stats->slab_time;
+			nrQueries++;
+			if (nrQueries == scenario.numQueries / fractionToDiscard)
+				timer2.reset(); //don't count the first x% of queries for caching-reasons
 		}
+		if (nrQueries != scenario.numQueries)
+			throw exception("beep boop");
 		res.modeAverageQueryTimes.push_back(timer.reset() / scenario.numQueries);
+		res.modeAverageQueryTimesExcludingFirst.push_back(timer2.reset() / (scenario.numQueries * (fractionToDiscard - 1) / fractionToDiscard));
 	}
-
-	/*std::cout << std::endl << "cell_time, range_search_time, relevant_colors, slab_time" << std::endl;
-	for (int k : scenario.ks) {
-		std::cout  << k << ", " << averages[k].cell_time.count() << ", " << averages[k].range_search_time.count() << ", " << averages[k].relevant_colors << ", " << averages[k].slab_time.count() << std::endl;
-	}*/
 
 	std::cout << " (" << totalTime.sinceStart().count() / 1e9 << " sec)" << std::endl;
 	return res;
 }
 
+//prepare and run all 2D experiments
 void Tester2D::run()
 {
 	// parameters are: ns, rs, ks, numCols, defaultPower
 	// s = -1 means n^{defaultPower}
 
 	//synthetic uniform random scenarios
-	std::vector<int> /*professor doctor*/ testks = { 1, 3, 10, 30, 100, 300, 1000, 3000, 10000, 20000, 40000, 60000, 80000, 100000, 120000, 140000, 150000 };
-	std::vector<Scenario> increasingNScenarios = TestFuncs::generateScenarios(TestFuncs::range(10000, 150000, 10000), { -1 }, testks, { 10000 }, 1.0 / 3);
-	std::vector<Scenario> increasingPhiScenarios = TestFuncs::generateScenarios({ 100000 }, { -1 }, testks, { 1, 100, 1000, 5000, 10000, 20000, 30000, 40000,50000, 60000, 70000, 80000, 90000, 100000 }, 1.0 / 3); // increasing numCols
-	std::vector<Scenario> increasingSScenarios = TestFuncs::generateScenarios({ 100000 }, { 10, 20, 40, 60, 80, 100, 150 }, testks, { 10000 }, 1.0 / 3);												  // increasing s
+	std::vector<int> /*professor doctor*/ testks = { 10, 100, 1000, 5000, 10000, 25000, 50000, 75000,  100000, 150000, 200000, 250000, 290000, 350000, 400000, 450000, 490000 };
+	std::vector<Scenario> increasingNScenarios = TestFuncs::generateScenarios(TestFuncs::range(50000, 500000, 50000), { -1 }, testks, { 50000 }, 1.0 / 3);
+	std::vector<Scenario> increasingPhiScenarios = TestFuncs::generateScenarios({ 250000 }, { -1 }, testks, { 1, 100, 1000, 5000, 10000, 25000, 50000, 75000, 100000, 125000, 150000, 175000, 200000, 225000, 250000 }, 1.0 / 3);
+	std::vector<Scenario> increasingSScenarios = TestFuncs::generateScenarios({ 250000 }, { 10, 20, 40, 60, 80, 100, 150, 200 }, testks, { 50000 }, 1.0 / 3);
 
 	// grouped scenarios
-	std::vector<Scenario> groupedScenarios = TestFuncs::generateScenarios({ 100000 }, { -1 }, testks, { 10000 }, 1.0 / 3, { 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 }, { 5000 }); // grouped
+	std::vector<Scenario> groupedScenarios = TestFuncs::generateScenarios({ 250000 }, { -1 }, testks, { 50000 }, 1.0 / 3, { 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 }, { 5000 });
+	std::vector<Scenario> checkerScenarios = TestFuncs::generateScenarios({ 250000 }, { -1 }, testks, { 50000 }, 1.0 / 3, { 0 }, { 0 }, { 222 });
 
 	// real scenarios
-	std::vector<Scenario> realScenariosWalking = TestFuncs::generateRealScenarios("openML/php3CTpvq.arff", 1,2, { 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 }, testks);
+	std::vector<Scenario> realScenariosWalking = TestFuncs::generateRealScenarios("openML/php3CTpvq.arff", 1, 2, { 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 }, testks);
 	std::vector<Scenario> realScenariosRansom = TestFuncs::generateRealScenarios("openML/dataset.arff", 4, 8, { 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09 }, testks);
 
 	std::vector<Scenario> scienceParkScenarios = TestFuncs::generateRealScenarios("osm/1.points", 4, 8, { 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 }, testks);
 	std::vector<Scenario> bbgScenarios = TestFuncs::generateRealScenarios("osm/bbg.points", 4, 8, { 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 }, testks);
 	std::vector<Scenario> bieleveldScenarios = TestFuncs::generateRealScenarios("osm/bieleveld.points", 4, 8, { 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 }, testks);
-	
+
+	std::vector<Scenario> syntheticBbg = TestFuncs::generateScenarios(TestFuncs::range(6687, 66870, 6687), { -1 }, testks, { 11 }, 1.0 / 3);
+	std::vector<Scenario> syntheticBbgGrouped = TestFuncs::generateScenarios(TestFuncs::range(6687, 66870, 6687), { -1 }, testks, { 11 }, 1.0 / 3, { 1 }, { 1000 });
+
+
+
+
 
 	// all DS's to test
 	typedef std::function<std::unique_ptr<AAS2DModeDS>(std::vector<Point_2>&, std::vector<Color_>&, Scenario&)> FuncType;
@@ -367,7 +472,9 @@ void Tester2D::run()
 		{ return std::make_unique<AAS2DModeReportDS>(points, colors); };
 	FuncType buildPerColor = [](std::vector<Point_2>& points, std::vector<Color_>& colors, Scenario& scenario)
 		{ return std::make_unique<AAS2DModePerColorDS>(points, colors, scenario.numColors); };
-	FuncType f1{ [](std::vector<Point_2>& points, std::vector<Color_>& colors, Scenario& scenario)
+	FuncType buildSimpleGrid = [](std::vector<Point_2>& points, std::vector<Color_>& colors, Scenario& scenario)
+		{ return std::make_unique<AAS2DModeGridDS>(points, colors, scenario.s, scenario.numColors); };
+	/*FuncType f1{ [](std::vector<Point_2>& points, std::vector<Color_>& colors, Scenario& scenario)
 				{
 					return std::make_unique<AAS2DModeAmcDS>(points, colors, RustDSType::GridNoColor, scenario.s);
 				} };
@@ -382,19 +489,34 @@ void Tester2D::run()
 	FuncType f4{ [](std::vector<Point_2>& points, std::vector<Color_>& colors, Scenario& scenario)
 				{
 					return std::make_unique<AAS2DModeAmcDS>(points, colors, RustDSType::GridSortedColor, scenario.s);
-				} };
-	std::vector<FuncType> funcs = { buildReport, buildPerColor, f1, f2, f3, f4 };
+				} };*/
+	std::vector<FuncType> funcs = {
+		buildReport,
+		buildPerColor,
+		buildSimpleGrid,
+		//f1 , 
+		//f2,
+		//f3,
+		//f4
+	};
+
+	/*std::vector<Scenario> repeatedScenarios;
+	for (int i = 0; i < 100; i++)
+		repeatedScenarios.push_back(increasingNScenarios[0]);*/
 
 	auto tuples = {
 		std::make_tuple("2D_increasingN", increasingNScenarios),
-		std::make_tuple("2D_increasingPhi", increasingPhiScenarios),
 		std::make_tuple("2D_increasingS", increasingSScenarios),
+		std::make_tuple("2D_increasingPhi", increasingPhiScenarios),
 
 		std::make_tuple("2D_grouped", groupedScenarios),
+		std::make_tuple("2D_checkers", checkerScenarios),
 
 		std::make_tuple("2D_sciencePark", scienceParkScenarios),
-		std::make_tuple("2D_bbg", bbgScenarios),
 		std::make_tuple("2D_bieleveld", bieleveldScenarios),
+		std::make_tuple("2D_bbg", bbgScenarios),
+		std::make_tuple("2D_bbgSynthetic", syntheticBbg),
+		std::make_tuple("2D_bbgSyntheticGrouped", syntheticBbgGrouped),
 
 		std::make_tuple("2D_realWalking", realScenariosWalking),
 		std::make_tuple("2D_realRansom", realScenariosRansom),

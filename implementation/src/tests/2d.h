@@ -4,8 +4,8 @@
 #include <set>
 #include "../shared/defs.h"
 #include "../2D/range_query.h"
-#include "../2D/mode_query.h"
 #include "../2D/mode_naive.h"
+#include "../2D/grid_simple.h"
 
 using namespace std;
 
@@ -20,6 +20,7 @@ struct Tester2D {
 
 	std::vector<Point_2> generateUniformPoints(const Scenario& scenario);
 	std::vector<Color_> generateGroupedColors(const Scenario& scenario, std::vector<Point_2> points);
+	std::vector<Color_> generateCheckerboardColors(Scenario& scenario, std::vector<Point_2> points);
 
 
 	std::vector<std::vector<KQuery2D>> generateUniformKQueries(const Scenario& scenario);
@@ -34,6 +35,8 @@ public:
 	void run();
 
 	void checkCorrectness();
+	void visualizePointsets();
+
 
 	TestResult runScenario(Scenario& scenario, std::function<std::unique_ptr<AAS2DModeDS>(std::vector<Point_2>&,std::vector<Color_>&, Scenario&)> makeDS);
 	TestResult runDsOnPoints(Scenario& scenario, Dataset2D data, std::function<std::unique_ptr<AAS2DModeDS>(std::vector<Point_2>&,std::vector<Color_>&, Scenario&)> makeDS);

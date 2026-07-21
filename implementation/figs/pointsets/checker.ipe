@@ -1,0 +1,1327 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipe SYSTEM "ipe.dtd">
+<ipe version="70218" creator="Ipe 7.2.29">
+<info created="D:20240902125151" modified="D:20260710113635"/>
+<ipestyle name="basic">
+<symbol name="arrow/arc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/farc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/ptarc(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fptarc(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="mark/circle(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</symbol>
+<symbol name="mark/disk(sx)" transformations="translations">
+<path fill="sym-stroke">
+0.6 0 0 0.6 0 0 e
+</path>
+</symbol>
+<symbol name="mark/fdisk(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+0.5 0 0 0.5 0 0 e
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+0.6 0 0 0.6 0 0 e
+0.4 0 0 0.4 0 0 e
+</path>
+</group>
+</symbol>
+<symbol name="mark/box(sx)" transformations="translations">
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</symbol>
+<symbol name="mark/square(sx)" transformations="translations">
+<path fill="sym-stroke">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+</path>
+</symbol>
+<symbol name="mark/fsquare(sfx)" transformations="translations">
+<group>
+<path fill="sym-fill">
+-0.5 -0.5 m
+0.5 -0.5 l
+0.5 0.5 l
+-0.5 0.5 l
+h
+</path>
+<path fill="sym-stroke" fillrule="eofill">
+-0.6 -0.6 m
+0.6 -0.6 l
+0.6 0.6 l
+-0.6 0.6 l
+h
+-0.4 -0.4 m
+0.4 -0.4 l
+0.4 0.4 l
+-0.4 0.4 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="mark/cross(sx)" transformations="translations">
+<group>
+<path fill="sym-stroke">
+-0.43 -0.57 m
+0.57 0.43 l
+0.43 0.57 l
+-0.57 -0.43 l
+h
+</path>
+<path fill="sym-stroke">
+-0.43 0.57 m
+0.57 -0.43 l
+0.43 -0.57 l
+-0.57 0.43 l
+h
+</path>
+</group>
+</symbol>
+<symbol name="arrow/fnormal(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/pointed(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/fpointed(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-0.8 0 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/linear(spx)">
+<path stroke="sym-stroke" pen="sym-pen">
+-1 0.333 m
+0 0 l
+-1 -0.333 l
+</path>
+</symbol>
+<symbol name="arrow/fdouble(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/double(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+-1 0 m
+-2 0.333 l
+-2 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/mid-normal(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0.5 0 m
+-0.5 0.333 l
+-0.5 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/mid-fnormal(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0.5 0 m
+-0.5 0.333 l
+-0.5 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/mid-pointed(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+0.5 0 m
+-0.5 0.333 l
+-0.3 0 l
+-0.5 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/mid-fpointed(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+0.5 0 m
+-0.5 0.333 l
+-0.3 0 l
+-0.5 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/mid-double(spx)">
+<path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
+1 0 m
+0 0.333 l
+0 -0.333 l
+h
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<symbol name="arrow/mid-fdouble(spx)">
+<path stroke="sym-stroke" fill="white" pen="sym-pen">
+1 0 m
+0 0.333 l
+0 -0.333 l
+h
+0 0 m
+-1 0.333 l
+-1 -0.333 l
+h
+</path>
+</symbol>
+<anglesize name="22.5 deg" value="22.5"/>
+<anglesize name="30 deg" value="30"/>
+<anglesize name="45 deg" value="45"/>
+<anglesize name="60 deg" value="60"/>
+<anglesize name="90 deg" value="90"/>
+<arrowsize name="large" value="10"/>
+<arrowsize name="small" value="5"/>
+<arrowsize name="tiny" value="3"/>
+<color name="blue" value="0 0 1"/>
+<color name="brown" value="0.647 0.165 0.165"/>
+<color name="darkblue" value="0 0 0.545"/>
+<color name="darkcyan" value="0 0.545 0.545"/>
+<color name="darkgray" value="0.663"/>
+<color name="darkgreen" value="0 0.392 0"/>
+<color name="darkmagenta" value="0.545 0 0.545"/>
+<color name="darkorange" value="1 0.549 0"/>
+<color name="darkred" value="0.545 0 0"/>
+<color name="gold" value="1 0.843 0"/>
+<color name="gray" value="0.745"/>
+<color name="green" value="0 1 0"/>
+<color name="lightblue" value="0.678 0.847 0.902"/>
+<color name="lightcyan" value="0.878 1 1"/>
+<color name="lightgray" value="0.827"/>
+<color name="lightgreen" value="0.565 0.933 0.565"/>
+<color name="lightyellow" value="1 1 0.878"/>
+<color name="navy" value="0 0 0.502"/>
+<color name="orange" value="1 0.647 0"/>
+<color name="pink" value="1 0.753 0.796"/>
+<color name="purple" value="0.627 0.125 0.941"/>
+<color name="red" value="1 0 0"/>
+<color name="seagreen" value="0.18 0.545 0.341"/>
+<color name="turquoise" value="0.251 0.878 0.816"/>
+<color name="violet" value="0.933 0.51 0.933"/>
+<color name="yellow" value="1 1 0"/>
+<dashstyle name="dash dot dotted" value="[4 2 1 2 1 2] 0"/>
+<dashstyle name="dash dotted" value="[4 2 1 2] 0"/>
+<dashstyle name="dashed" value="[4] 0"/>
+<dashstyle name="dotted" value="[1 3] 0"/>
+<gridsize name="10 pts (~3.5 mm)" value="10"/>
+<gridsize name="14 pts (~5 mm)" value="14"/>
+<gridsize name="16 pts (~6 mm)" value="16"/>
+<gridsize name="20 pts (~7 mm)" value="20"/>
+<gridsize name="28 pts (~10 mm)" value="28"/>
+<gridsize name="32 pts (~12 mm)" value="32"/>
+<gridsize name="4 pts" value="4"/>
+<gridsize name="56 pts (~20 mm)" value="56"/>
+<gridsize name="8 pts (~3 mm)" value="8"/>
+<opacity name="10%" value="0.1"/>
+<opacity name="30%" value="0.3"/>
+<opacity name="50%" value="0.5"/>
+<opacity name="75%" value="0.75"/>
+<pen name="fat" value="1.2"/>
+<pen name="heavier" value="0.8"/>
+<pen name="ultrafat" value="2"/>
+<symbolsize name="large" value="5"/>
+<symbolsize name="small" value="2"/>
+<symbolsize name="tiny" value="1.1"/>
+<textsize name="Huge" value="\Huge"/>
+<textsize name="LARGE" value="\LARGE"/>
+<textsize name="Large" value="\Large"/>
+<textsize name="footnote" value="\footnotesize"/>
+<textsize name="huge" value="\huge"/>
+<textsize name="large" value="\large"/>
+<textsize name="script" value="\scriptsize"/>
+<textsize name="small" value="\small"/>
+<textsize name="tiny" value="\tiny"/>
+<textstyle name="center" begin="\begin{center}" end="\end{center}"/>
+<textstyle name="item" begin="\begin{itemize}\item{}" end="\end{itemize}"/>
+<textstyle name="itemize" begin="\begin{itemize}" end="\end{itemize}"/>
+<tiling name="falling" angle="-60" step="4" width="1"/>
+<tiling name="rising" angle="30" step="4" width="1"/>
+</ipestyle>
+<ipestyle name="drawing">
+<color name="blue" value="0.25 0.55 0.9"/>
+<color name="red" value="1 0.25 0.25"/>
+<dashstyle name="smallDotted" value="[1] 0"/>
+<preamble>
+\usepackage{amsmath}
+\usepackage{xspace}
+</preamble>
+<layout paper="596 843" origin="0 0" frame="596 843"/>
+</ipestyle>
+<page>
+<layer name="alpha"/>
+<view layers="alpha" active="alpha"/>
+<use name="mark/disk(sx)" pos="178.39 17.1079" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="158.695 100.272" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="190.976 183.644" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="48.7411 62.6196" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="111.398 119.674" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="88.5422 180.341" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="149.275 198.717" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="119.143 174.249" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="173.927 147.581" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="109.095 158.604" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="40.4554 184.213" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="128.343 48.4001" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="27.8692 173.57" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="171.828 117.267" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="68.3001 90.0943" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="186.804 176.234" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="176.403 130.274" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="115.378 65.0003" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="76.8904 147.4" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="199.938 102.461" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="41.7817 53.5431" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="46.595 36.1478" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="85.5678 52.7095" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="107.027 151.759" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="0.207417 170.575" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="33.6807 188.475" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="167.258 79.939" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="22.8972 129.373" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="170.148 183.191" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="72.7704 84.1537" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="113.266 146.921" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="7.4676 3.5112" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="81.4411 160.177" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="178.525 26.285" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="74.445 145.339" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="9.57128 27.026" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="124.961 128.376" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="129.364 148.702" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="22.5964 90.1209" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="121.481 74.4085" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="58.0632 105.256" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="60.6093 47.2608" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="137.097 13.1396" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="60.3961 70.5403" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="123.223 107.635" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="139.239 1.9777" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="87.9072 139.345" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="100.514 116.429" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="22.7428 2.97637" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="55.8171 122.699" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="177.815 4.48169" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="115.246 183.629" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="27.6563 92.5887" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="138.387 186.53" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="50.7558 75.8241" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="185.216 75.1555" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="44.5773 43.4056" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="75.1175 83.9482" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="120.426 88.9693" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="187.69 179.146" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="0.606718 188.545" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="116.153 171.673" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="128.129 80.4278" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="40.5641 114.159" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="38.0347 16.9799" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="117.784 45.5976" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="104.993 56.6564" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="107.657 90.4959" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="170.981 37.2832" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="14.9656 147.523" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="68.7677 178.503" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="152.987 194.505" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="165.011 109.75" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="42.9343 180.495" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="98.1473 104.181" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="191.4 159.738" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="111.859 100.713" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="99.3711 84.8428" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="151.486 106.94" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="165.032 197.341" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="28.8884 190.684" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="79.0567 33.3965" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="191.933 84.9127" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="190.313 153.101" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="117.874 68.6462" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="66.0435 176.958" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="52.1437 34.8011" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="179.86 53.1741" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="109.576 156.733" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="31.9133 109.542" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="41.2176 66.3749" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="113.605 83.7296" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="163.652 33.6815" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="41.8917 95.2926" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="6.07815 124.857" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="12.3262 91.7274" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="106.997 140.766" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="16.2227 123.199" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="83.2655 45.2664" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="104.594 167.296" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="66.8238 85.4833" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="8.91777 46.4295" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="56.9367 47.8858" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="159.971 157.962" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="4.53146 75.563" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="179.639 94.4505" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="14.8637 146.257" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="117.926 136.122" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="94.1068 170.329" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="171.384 48.8584" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="131.454 153.354" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="81.4311 5.56871" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="92.0521 27.925" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="35.4332 181.093" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="65.9992 82.8134" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="32.0773 6.16818" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="159.329 87.7706" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="123.246 51.5479" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="114.652 79.0497" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="149.162 89.2609" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="191.336 71.1708" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="35.0077 101.652" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="77.4847 133.326" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="63.5421 10.4243" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="96.4 170.075" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="182.427 81.5315" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="69.6259 125.977" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="84.4535 111.222" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="120.895 64.5349" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="76.5881 196.559" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="71.5594 10.3495" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="67.7419 44.6999" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="14.157 101.711" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="112.205 18.408" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="92.7997 174.222" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="185.495 37.265" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="126.303 129.329" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="102.922 159.854" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="60.1267 179.939" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="42.0857 187.666" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="56.2679 32.2558" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="94.237 58.3819" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="178.607 22.1288" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="25.2675 191.928" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="126.577 127.611" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="179.753 57.9152" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="50.396 131.258" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="58.8445 118.618" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="69.1781 31.6552" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="129.54 107.899" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="134.231 167.209" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="66.0939 59.9217" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="168.562 111.336" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="152.029 104.885" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="128.758 114.355" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="87.5089 171.68" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="166.685 139.84" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="11.995 130.005" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="118.883 97.4183" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="121.404 58.0602" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="120.656 181.23" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="103.098 3.79136" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="107.142 57.4199" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="23.6821 145.792" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="199.278 6.91878" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="173.344 35.2394" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="114.673 54.456" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="37.5188 67.8815" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="157.753 94.136" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="144.304 154.423" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="48.4465 177.883" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="38.4336 76.6606" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="44.8774 65.2852" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="185.618 7.94188" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="61.2165 155.119" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="0 129.593" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="105.827 152.861" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="77.0345 25.9104" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="108.257 21.8158" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="136.669 56.3639" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="7.89885 185.904" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="93.4511 66.9343" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="35.9336 145.28" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="29.4294 42.1753" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="54.5419 37.7016" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="7.80678 199.035" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="83.9701 53.7274" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="54.0593 187.277" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="101.668 69.628" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="17.5567 13.3545" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="51.9945 37.2372" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="106.786 103.964" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="89.7926 152.965" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="141.352 141.238" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="65.6591 192.866" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="138.974 72.1013" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="165.608 74.828" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="138.695 17.9906" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="109.875 31.1655" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="135.395 101.476" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="108.196 112.555" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="155.605 102.549" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="31.7609 53.8491" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="25.9338 2.5238" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="144.052 129.321" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="13.2523 126.216" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="102.99 154.887" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="117.093 48.1272" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="139.301 83.3805" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="6.70853 99.3719" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="142.114 129.231" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="182.869 129.72" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="45.212 66.7784" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="161.253 102.297" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="84.6501 137.685" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="33.3923 33.5906" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="179.397 87.5562" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="186.914 85.2182" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="6.85588 93.9174" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="1.88521 52.37" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="91.8729 39.8667" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="198.114 95.1773" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="117.136 27.9294" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="70.2177 22.4795" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="113.739 131.808" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="134.054 66.2763" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="42.712 137.169" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="80.6494 79.0423" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="129.903 176.629" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="34.4093 140.32" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="61.4915 197.935" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="21.4234 101.791" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="33.0761 49.5561" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="185.282 156.497" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="158.531 135.794" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="87.7041 32.9194" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="184.793 20.6475" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="19.7446 137.563" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="60.3255 147.944" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="12.2556 184.51" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="170.414 62.4154" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="54.3913 20.7075" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="178.429 35.0246" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="171.116 96.1992" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="133.626 65.4415" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="85.7777 20.1704" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="53.9697 51.686" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="77.3443 23.8879" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="136.465 34.5944" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="91.3825 103.721" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="36.6446 175.217" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="36.6163 140.173" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="7.32857 126.006" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="82.5022 6.89103" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="29.0638 199.112" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="114.543 151.004" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="153.494 56.2861" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="33.3234 59.2132" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="37.2573 38.9121" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="105.44 152.073" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="178.789 131.023" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="84.1686 33.7236" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="69.62 136.341" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="71.6143 132.635" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="106.559 35.8242" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="76.696 3.07996" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="52.5005 137.398" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="98.3444 145.578" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="85.9739 57.6896" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="96.0257 13.1517" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="91.9413 82.1148" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="5.02552 20.466" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="61.7016 26.3525" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="153.329 21.6537" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="116.307 173.094" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="191.964 125.884" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="173.65 110.544" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="110.606 145.804" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="5.47867 102.531" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="47.0473 59.6423" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="133.025 58.6338" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="80.5862 103.454" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="35.4546 130.918" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="95.9826 47.406" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="21.3777 141.489" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="151.323 169.608" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="88.2942 128.758" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="75.7617 163.237" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="39.1142 39.7826" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="118.475 182.982" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="46.0416 48.3158" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="111.758 96.1764" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="50.7502 179.75" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="145.069 132.34" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="174.976 176.821" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="64.9483 114.562" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="137.433 57.9911" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="81.9543 159.937" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="18.5381 145.176" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="82.9117 24.3953" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="182.912 145.153" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="35.474 134.782" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="54.2703 84.2136" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="165.049 13.5161" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="103.276 68.8671" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="184.087 115.612" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="194.446 20.1055" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="103.65 89.4141" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="34.7311 198.765" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="136.435 147.405" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="193.211 44.936" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="131.933 7.33012" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="79.7577 175.125" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="12.676 88.8577" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="143.16 52.7805" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="68.6652 196.928" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="18.1188 29.6932" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="21.7566 36.1565" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="76.3636 166.363" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="168.632 79.7746" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="105.137 148.76" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="139.149 100.234" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="37.2838 117.75" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="80.8581 25.2102" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="15.9756 99.0495" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="193.502 107.386" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="28.0777 139.972" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="160.766 114.185" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="85.4878 68.8931" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="173.823 0.448457" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="50.3263 94.2584" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="85.1372 39.6123" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="179.282 44.7929" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="80.1753 45.4529" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="23.3246 28.2203" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="0.0910588 47.6564" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="44.0583 120.01" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="161.609 86.4994" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="152.883 83.3521" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="172.235 142.76" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="148.399 79.5001" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="103.916 112.894" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="101.442 53.9436" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="22.6417 10.9516" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="59.3707 95.729" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="190.717 181.097" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="7.77282 176.166" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="91.7549 164.258" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="23.1498 9.40336" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="96.5192 159.272" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="3.57363 118.273" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="85.3579 7.42961" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="31.3539 101.208" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="0.219337 74.4905" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="4.50603 26.7294" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="11.8005 176.475" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="116.816 112.379" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="122.242 0.880043" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="115.195 169.992" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="109.888 37.2117" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="136.645 139.888" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="76.1942 122.714" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="13.8084 24.3372" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="72.1744 122.591" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="29.4506 0.408324" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="151.483 139.926" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="120.793 116.839" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="97.4407 54.8786" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="76.6374 188.044" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="72.7283 122.284" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="156.441 90.1814" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="87.203 78.5904" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="164.341 57.5575" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="146.035 60.7591" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="153.596 185.958" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="27.9107 174.346" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="4.6345 80.7029" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="199.72 104.77" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="172.244 107.953" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="65.9393 198.435" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="109.111 85.8304" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="101.694 146.401" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="100.191 37.0363" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="150.476 144.585" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="121.428 83.9836" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="67.3691 199.116" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="27.7855 22.2168" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="127.522 161.933" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="10.0977 73.4939" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="115.678 19.5901" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="111.556 114.315" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="170.625 136.67" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="93.6473 108.589" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="157.685 178.132" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="15.2261 102.007" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="171.675 58.6358" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="9.95319 123.928" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="93.3705 150.326" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="130.669 2.74268" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="17.3296 37.2775" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="45.6294 52.7874" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="169.504 146.281" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="67.5715 107.04" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="152.266 151.178" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="6.8801 55.9525" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="16.7562 171.428" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="85.877 88.6801" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="74.1342 76.1393" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="10.6433 162.135" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="174.711 168.917" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="126.896 151.814" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="134.047 141.717" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="112.89 139.822" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="194.822 66.2196" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="55.6316 118.078" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="146.108 126.496" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="162.197 183.286" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="176.125 123.749" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="28.144 132.025" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="29.1292 60.3509" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="120 21.0596" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="185.191 38.2624" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="50.4029 117.422" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="141.459 111.713" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="180.961 93.9016" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="112.49 114.427" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="17.0118 42.162" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="105.011 153.787" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="156.19 85.5012" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="117.325 80.4784" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="197.291 22.8029" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="33.3881 32.9476" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="51.339 88.2923" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="2.0932 126.215" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="162.88 106.084" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="147.83 190.39" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="133.589 37.5335" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="98.0199 136.095" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="154.534 153.005" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="51.0606 141.359" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="8.74014 185.737" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="106.11 194.669" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="166.236 130.852" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="179.234 32.5837" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="185.896 1.8959" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="199.06 82.475" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="133.012 46.262" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="3.97883 170.24" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="6.13655 4.81267" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="42.3063 1.19183" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="43.6838 161.241" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="8.83249 71.2225" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="15.496 61.3756" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="114.826 57.0672" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="124.874 52.6776" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="115.261 130.974" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="52.0746 89.6588" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="91.9033 29.4837" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="22.4874 123.331" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="35.4015 43.1009" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="22.8701 46.1679" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="63.7917 84.3801" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="180.688 122.086" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="35.7853 119.931" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="130.716 22.3265" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="64.0776 164.354" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="157.189 102.33" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="139.149 3.38229" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="145.127 102.027" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="98.6479 174.889" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="2.04066 171.583" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="197.351 126.315" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="144.474 58.8667" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="194.576 44.992" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="135.199 89.0297" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="15.6886 101.689" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="48.1075 159.776" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="5.59632 55.9602" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="107.271 111.286" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="144.633 36.8985" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="156.735 9.31873" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="31.5906 199.217" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="58.1156 63.0935" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="19.5583 109.417" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="179.383 100.446" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="134.926 89.5337" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="133.215 166.369" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="65.0093 62.3436" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="33.1261 132.814" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="4.50476 8.73032" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="151.632 73.0559" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="88.9662 146.13" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="9.70383 57.1336" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="1.92485 2.86264" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="180.079 114.212" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="34.8839 171.419" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="47.2629 68.4047" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="71.8075 79.1081" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="196.351 95.0618" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="183.295 157.784" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="103.449 1.14246" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="142.863 173.466" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="137.612 60.7199" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="141.784 111.716" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="191.565 95.2504" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="196.344 199.194" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="165.471 102.509" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="175.519 188.815" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="199.106 107.206" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="192.572 57.994" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="114.913 61.8143" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="175.703 13.8178" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="79.2809 120.691" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="145.722 12.8539" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="155.888 86.6186" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="170.129 156.113" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="15.7092 89.1328" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="138.389 121.036" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="170.998 83.9975" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="185.155 180.044" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="170.674 173.036" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="79.1267 146.485" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="61.429 40.0021" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="131.955 23.8988" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="73.3517 13.5857" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="52.8002 33.6549" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="119.266 165.978" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="57.5899 42.7959" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="9.81047 18.7553" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="109.867 96.0337" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="149.602 119.652" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="104.124 39.2602" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="39.1087 106.748" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="146.523 104.885" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="147.804 20.4716" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="58.2026 99.0203" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="80.4399 44.8915" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="55.7375 80.3183" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="75.3935 133.004" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="117.275 26.2257" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="23.1259 35.023" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="80.6746 185.465" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="16.3449 122.926" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="141.195 63.8112" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="151.949 71.6802" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="49.7192 114.471" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="66.1427 194.707" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="30.6815 87.0959" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="156.218 38.9439" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="120.065 174.161" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="157.067 191.187" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="68.3333 89.1605" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="186.227 0.549772" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="167.395 173.104" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="175.298 46.3596" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="191.71 49.5653" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="110.77 155.402" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="51.1127 81.7714" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="102.187 82.5432" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="3.76512 67.6937" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="29.8964 29.234" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="85.3962 184.511" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="107.504 133.762" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="34.8112 39.9277" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="55.0312 170.668" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="118.804 151.364" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="122.35 46.0375" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="81.715 75.8979" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="68.2288 149.003" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="175.705 171.387" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="117.945 99.065" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="71.5703 193.967" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="53.8184 81.1225" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="41.9697 38.4192" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="50.9883 99.4499" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="185.27 83.4301" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="178.199 159.566" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="85.2105 119.471" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="60.2653 168.692" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="35.5772 136.017" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="78.8802 118.398" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="92.0782 75.171" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="15.3707 187.37" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="36.644 62.1372" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="70.0672 123.424" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="92.2503 72.9595" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="188.522 46.7259" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="12.0979 185.046" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="34.7133 101.578" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="145.975 199.582" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="171.144 189.658" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="190.706 128.98" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="79.3059 86.6465" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="158.527 30.5034" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="147.892 185.676" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="106.053 60.5141" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="37.0382 64.5402" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="144.714 132.037" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="5.64579 130.792" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="72.1153 183.622" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="162.966 123.193" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="169.763 111.355" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="70.7123 81.5479" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="67.9623 122.058" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="59.6282 40.5282" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="86.2298 73.0108" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="34.1164 65.4943" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="119.525 125.212" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="71.2552 36.0918" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="164.38 141.5" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="101.445 78.5205" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="186.846 79.5347" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="191.248 177.86" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="43.4238 59.4624" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="130.471 195.514" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="2.89688 52.5437" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="193.746 89.9498" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="83.1398 44.7854" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="110.112 77.789" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="151.103 122.036" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="91.6117 181.518" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="125.682 194.901" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="125.082 1.78761" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="124.581 63.6187" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="178.726 94.2803" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="59.4802 85.6247" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="4.77757 7.25066" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="111.877 176.715" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="151.25 88.1567" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="173.982 142.522" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="79.7661 175.749" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="184.865 120.021" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="15.3375 8.38106" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="138.134 134.715" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="104.855 58.4607" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="55.9701 0.166521" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="75.03 120.555" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="186.638 98.172" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="101.253 11.2123" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="132.071 116.675" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="29.0855 149.508" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="82.4756 185.04" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="132.201 98.0245" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="84.1667 106.359" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="133.925 134.854" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="84.8591 44.6338" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="91.2045 3.86526" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="128.122 178.586" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="0.952816 179.051" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="157.116 155.186" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="72.5815 78.7891" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="107.61 184.158" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="66.4353 91.2838" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="156.869 129.433" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="12.1321 181.792" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="152.461 154.498" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="46.4574 116.725" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="74.1467 137.529" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="73.0035 59.6644" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="142.389 77.5987" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="66.3632 171.156" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="117.225 27.245" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="113.627 97.7706" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="86.6921 35.5698" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="66.0173 160.161" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="34.5999 91.7621" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="109.182 172.649" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="39.0434 64.815" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="4.877 100.517" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="133.053 106.919" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="59.8518 19.2546" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="86.7952 152.329" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="179.896 122.896" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="94.1686 44.5292" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="13.7188 50.8688" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="104.601 199.864" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="102.398 180.345" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="46.7242 159.357" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="83.5651 92.2276" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="164.666 7.07335" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="43.8241 8.207" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="16.452 129.016" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="186.868 80.9548" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="103.709 115.278" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="64.0548 25.4695" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="35.1061 140.292" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="97.5943 100.326" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="91.8913 38.373" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="14.9548 0.120859" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="173.962 95.471" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="157.965 4.00782" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="185.204 58.1322" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="44.9383 186.249" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="88.9865 15.7061" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="8.80035 43.0361" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="66.3876 122.87" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="73.9186 100.673" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="149.832 173.589" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="48.8357 151.003" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="23.7004 20.4459" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="162.122 108.073" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="64.8614 178.235" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="8.12068 91.1578" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="113.652 19.224" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="102.497 162.544" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="148.505 129.72" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="99.355 166.452" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="26.1217 56.7645" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="153.29 141.173" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="80.1886 65.1447" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="179.412 138.079" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="178.848 126.078" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="147.018 177.022" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="48.5149 117.486" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="62.5691 14.635" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="128.393 172.101" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="148.971 88.2278" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="159.179 134.382" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="85.7729 185.844" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="0.215189 174.068" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="76.4953 142.167" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="97.9288 116.651" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="121.632 118.761" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="55.1617 56.0546" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="114.4 25.5639" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="191.749 11.8784" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="35.4863 62.4665" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="138.992 85.0866" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="39.5172 12.5922" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="171.872 136.356" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="35.0818 72.6018" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="35.623 82.18" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="76.1413 194.749" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="41.5166 110.485" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="102.27 182.03" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="177.46 118.139" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="31.4282 33.3364" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="186.815 14.4074" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="58.8043 78.3017" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="173.214 51.426" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="132.942 196.584" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="126.442 160.548" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="146.198 86.2612" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="116.364 174.138" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="145.841 146.244" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="132.882 12.8372" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="108.033 136.291" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="57.7131 60.6081" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="168.361 120.626" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="152.629 53.2334" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="71.192 100.146" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="100.47 152.436" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="107.325 190.698" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="28.2135 44.4832" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="88.6742 15.278" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="58.9279 127.701" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="156.494 55.0899" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="100.881 196.573" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="12.4424 191.706" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="180.849 112.574" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="99.7689 101.964" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="75.3811 116.221" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="27.5998 104.083" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="2.78583 145.901" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="189.495 43.3933" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="114.184 90.996" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="28.6453 149.26" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="84.1398 199.074" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="158.891 0" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="93.9228 15.882" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="32.7136 46.9605" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="133.843 43.7211" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="12.5149 118.853" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="108.157 146.95" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="81.8017 17.581" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="37.8008 133.616" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="52.8304 136.15" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="5.54613 153.215" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="194.249 122.382" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="178.075 35.2504" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="118.597 121.697" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="198.455 130.145" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="32.2873 17.6938" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="161.951 122.829" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="177.545 8.35008" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="111.636 31.3191" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="132.527 153.703" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="58.2711 152.898" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="51.1193 172.416" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="20.8997 143.013" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="55.8973 187.117" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="24.6796 25.6536" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="156.414 158.447" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="195.548 134.892" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="144.953 194.758" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="155.143 168.575" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="126.075 15.4814" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="97.5629 82.9827" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="5.4018 44.3955" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="184.497 180.228" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="148.574 148.59" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="62.0127 167.168" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="135.153 164.406" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="170.626 157.892" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="3.72572 178.477" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="189.73 92.5811" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="143.034 115.654" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="18.0923 67.117" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="85.218 115.609" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="18.6988 5.02638" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="99.5807 92.8098" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="58.6583 99.5708" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="97.4697 113.117" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="125.942 49.7957" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="11.5657 153.097" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="142.003 36.5835" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="116.879 80.6045" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="33.5546 105.503" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="22.5349 121.724" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="99.9665 161.785" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="197.327 13.5387" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="139.808 90.3032" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="28.5223 29.0833" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="30.0915 31.3285" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="197.064 27.7129" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="37.9481 70.5904" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="100.273 85.1092" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="90.9501 92.3408" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="134.91 144.548" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="36.4258 65.6278" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="65.0379 140.21" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="145.831 195.948" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="199.943 77.3799" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="64.2809 26.8832" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="24.3735 105.914" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="144.451 120.228" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="127.487 84.6412" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="191.772 175.243" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="144.168 83.5451" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="141.307 154.323" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="33.938 107.175" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="118.741 53.9455" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="184.333 74.2632" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="58.1962 33.355" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="113.066 17.2149" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="183.248 51.39" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="52.2107 70.9314" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="71.4576 176.907" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="186.948 34.8344" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="156.254 1.24841" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="32.4929 198.474" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="113.737 61.175" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="108.392 63.3601" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="55.5863 181.17" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="113.601 155.813" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="78.1684 189.25" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="192.577 192.789" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="18.918 160.279" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="11.581 47.5518" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="75.7865 38.7486" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="76.7803 121.573" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="79.6921 82.6762" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="174.944 13.6324" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="66.8353 132.204" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="105.043 120.265" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="27.2559 76.0556" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="14.4986 154.909" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="12.462 38.9279" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="151.046 56.8573" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="178.946 189.978" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="99.8956 107.478" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="100.607 197.861" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="189.83 150.833" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="13.8901 1.28862" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="0.349563 105.152" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="177.007 130.837" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="2.11195 184.673" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="135.967 176.667" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="110.36 148.81" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="137.517 40.9159" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="117.383 67.496" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="108.372 69.8363" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="12.274 24.5905" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="195.981 10.8486" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="183.116 146.845" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="111.322 62.9618" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="16.3517 106.215" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="121.987 38.0762" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="70.245 122.959" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="114.538 198.427" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="166.275 132.084" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="49.9614 84.9255" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="88.1608 89.262" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="93.1835 106.459" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="126.999 143.901" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="43.7826 27.6027" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="86.3808 146.393" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="28.2889 103.852" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="48.3944 28.2924" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="143.206 197.235" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="128.747 54.8081" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="178.775 137.958" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="51.9677 88.5204" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="37.2695 58.9389" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="129.772 183.009" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="178.908 175.098" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="166.3 134.534" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="106.277 30.7487" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="13.7597 113.625" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="189.356 67.8918" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="33.1115 81.3752" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="26.9157 24.9393" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="29.3662 141.298" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="106.029 173.624" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="60.0299 107.671" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="31.7981 164.074" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="197.33 158.95" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="94.2093 96.5023" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="34.4526 196.406" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="108.085 116.305" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="44.6048 83.4661" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="133.426 44.6369" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="8.04865 96.4104" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="128.869 81.5361" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="80.7999 144.355" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="87.7984 109.013" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="102.59 6.29292" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="104.495 111.044" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="155.505 173.919" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="87.6813 78.7063" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="76.2391 83.6459" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="178.421 155.87" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="95.6716 187.928" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="178.09 67.0446" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="83.6883 166.072" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="88.7311 43.103" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="186.915 171.973" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="188.153 124.13" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="190.115 104.339" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="135.057 149.682" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="101.952 96.9881" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="100.08 18.5429" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="76.9752 10.6196" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="189.222 193.554" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="30.4813 185.333" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="51.1642 103.158" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="25.0107 110.61" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="78.4513 119.346" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="145.45 91.5444" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="109.783 164.525" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="50.3782 188.185" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="138.412 200" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="21.7159 18.6639" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="171.416 34.3095" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="114.663 158.032" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="138.652 38.7887" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="101.271 168.873" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="22.1359 139.349" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="197.241 147.457" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="146.923 50.0882" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="49.384 187.596" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="159.161 117.044" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="29.8568 27.733" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="121.389 61.5193" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="61.6813 120.53" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="50.451 161.382" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="78.8647 26.7751" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="117.159 159.173" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="122.251 98.9551" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="97.8726 177.236" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="116.515 26.6685" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="56.7435 119.876" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="77.5337 38.9424" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="118.757 105.526" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="40.089 77.0104" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="86.678 174.187" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="168.981 169.801" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="155.375 112.44" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="169.251 105.848" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="12.3732 103.994" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="175.085 102.194" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="159.142 91.0974" size="normal" stroke="blue"/>
+<use name="mark/disk(sx)" pos="189.65 1.28914" size="normal" stroke="red"/>
+<use name="mark/disk(sx)" pos="23.1484 153.639" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="29.4632 135.954" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="13.5757 161.968" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="109.148 38.6875" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="70.7638 76.3911" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="13.747 69.9002" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="80.2094 31.5578" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="7.03871 99.5278" size="normal" stroke="darkcyan"/>
+<use name="mark/disk(sx)" pos="98.9731 177.073" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="109.341 4.77091" size="normal" stroke="darkblue"/>
+<use name="mark/disk(sx)" pos="58.6905 144.529" size="normal" stroke="brown"/>
+<use name="mark/disk(sx)" pos="155.681 164.023" size="normal" stroke="lightgreen"/>
+<use name="mark/disk(sx)" pos="113.671 177.546" size="normal" stroke="orange"/>
+<use name="mark/disk(sx)" pos="67.0076 74.2012" size="normal" stroke="seagreen"/>
+<use name="mark/disk(sx)" pos="1.69784 5.09867" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="56.5096 9.03349" size="normal" stroke="violet"/>
+<use name="mark/disk(sx)" pos="17.1593 156.965" size="normal" stroke="brown"/>
+</page>
+</ipe>

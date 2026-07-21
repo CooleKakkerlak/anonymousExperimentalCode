@@ -42,14 +42,19 @@ void AAS1DModeArrangementDS::computeFaceData()
 	for (Face_handle face = arrangement.faces_begin(); face != arrangement.faces_end(); ++face)
 	{
 		conflictLists.push_back(ConflictList());
-		face->set_data(FaceData{faceIndex++});
+		Range undefined;
+		undefined.left = std::numeric_limits<int>::max();
+		undefined.right = std::numeric_limits<int>::min();
+		conflictLists[conflictLists.size() - 1].conflictingRayIndicesDownwards = undefined;
+		conflictLists[conflictLists.size() - 1].conflictingRayIndicesUpwards = undefined;
+		face->set_data(FaceData{ faceIndex++ });
 	}
 	int nrFaces = arrangement.number_of_faces();
 
 	// compute the conflictlist of each face, by computing the zone of each ray (i.e. the set of faces that intersect it)
 	for (int rayIndex = 0; rayIndex < rays.size(); rayIndex++)
 	{
-		const Ray_2 &ray = rays[rayIndex];
+		const Ray_2& ray = rays[rayIndex];
 
 		std::vector<CGAL::Object> zoneObjects;
 		CGAL::zone(arrangement, ray, std::back_inserter(zoneObjects) /*, *pointLocation*/);
@@ -81,11 +86,31 @@ void AAS1DModeArrangementDS::computeFaceData()
 			// this ray intersects these faces; add it to their conflict lists
 			for (int fInd : fIndices)
 			{
-				conflictLists[fInd].conflictingRayIndices.insert(rayIndex);
-				conflictLists[fInd].conflictingPointColors.insert(colors[rayIndex / 2]);
+				if (rayIndex % 2 == 0) {
+					conflictLists[fInd].conflictingRayIndicesUpwards.left = std::min(rayIndex, conflictLists[fInd].conflictingRayIndicesUpwards.left);
+					conflictLists[fInd].conflictingRayIndicesUpwards.right = std::max(rayIndex, conflictLists[fInd].conflictingRayIndicesUpwards.right);
+				}
+				if (rayIndex % 2 == 1) {
+					conflictLists[fInd].conflictingRayIndicesDownwards.left = std::min(rayIndex, conflictLists[fInd].conflictingRayIndicesDownwards.left);
+					conflictLists[fInd].conflictingRayIndicesDownwards.right = std::max(rayIndex, conflictLists[fInd].conflictingRayIndicesDownwards.right);
+				}
 			}
 		}
 	}
+
+	//doesn't work for s = 1
+	//lower face `intersects' everything. this messes with preprocessing time, so we clear it. Walking through the arrangement while maintaining the current intersecting lines still works, since no rays are strictly _under_ the lower face or any of its neighbors anyway
+	bool notSeenLowerFace = true;
+	for (auto& cl : conflictLists)
+		if (cl.conflictingRayIndicesUpwards.left == 0 && cl.conflictingRayIndicesUpwards.right == colors.size() * 2 - 2 &&
+			cl.conflictingRayIndicesDownwards.left == 1 && cl.conflictingRayIndicesDownwards.right == colors.size() * 2 - 1 && notSeenLowerFace) {
+			Range undefined;
+			undefined.left = std::numeric_limits<int>::max();
+			undefined.right = std::numeric_limits<int>::min();
+			cl.conflictingRayIndicesDownwards = undefined;
+			cl.conflictingRayIndicesUpwards = undefined;
+			notSeenLowerFace = false;
+		}
 
 	// compute mode color for each face by walking through the arrangement, maintaining the set of rays under the current face
 	std::map<Color_, int> underColorCounts = std::map<Color_, int>();
@@ -94,11 +119,16 @@ void AAS1DModeArrangementDS::computeFaceData()
 	std::vector<bool> added(faceIndex, false);	 // whether rays[i] has been added to the stack yet
 	std::vector<bool> visited(faceIndex, false); // whether rays[i] has been popped off the stack yet (it can be added to the stack multiple times because of walking backwards)
 	std::vector<Face_handle> faceStack;
+
+	Face_handle firstFace = arrangement.faces_begin();
+	if (conflictLists[firstFace->data().faceIndex].conflictingRayIndicesDownwards.left > conflictLists[firstFace->data().faceIndex].conflictingRayIndicesDownwards.right) //ensure we don't add the lower face as the first face
+		firstFace++;
 	faceStack.push_back(arrangement.faces_begin());
 
 	std::set<int> raysToCheck; // the set of rays to check after each step (consists of the conflict list of the current and previous face)
 	for (int i = 0; i < rays.size(); i++)
 		raysToCheck.insert(i); //.. except at the start, where we have to check every ray
+
 
 	while (!faceStack.empty())
 	{
@@ -106,8 +136,14 @@ void AAS1DModeArrangementDS::computeFaceData()
 		faceStack.pop_back();
 		int curFaceIndex = curFace->data().faceIndex;
 
+		if (conflictLists[curFaceIndex].conflictingRayIndicesDownwards.left > conflictLists[curFaceIndex].conflictingRayIndicesDownwards.right) // the lower face
+			continue;
+
 		// compute for each relevant ray whether it intersects this face
-		raysToCheck.insert(conflictLists[curFaceIndex].conflictingRayIndices.begin(), conflictLists[curFaceIndex].conflictingRayIndices.end());
+		for (int i = conflictLists[curFaceIndex].conflictingRayIndicesUpwards.left; i <= conflictLists[curFaceIndex].conflictingRayIndicesUpwards.right; i += 2)
+			raysToCheck.insert(i);
+		for (int i = conflictLists[curFaceIndex].conflictingRayIndicesDownwards.left; i <= conflictLists[curFaceIndex].conflictingRayIndicesDownwards.right; i += 2)
+			raysToCheck.insert(i);
 		for (int rayIndex : raysToCheck)
 		{
 			int twinRayIndex = rayIndex + (1 - 2 * (rayIndex % 2)); // the other ray that originates from the same point
@@ -193,22 +229,25 @@ void AAS1DModeArrangementDS::computeFaceData()
 				curr = curr->next();
 			} while (curr != start);
 
-			// checkUnderRays(underColorCounts, currentlyUnder, curFace); //DEBUG check
+			//checkUnderRays(underColorCounts, currentlyUnder, curFace); //DEBUG check
 
 			// store the current mode color in this face
 			FaceData fd = {
 				curFaceIndex,
 				maxCount(underColorCounts),
-				conflictLists[curFaceIndex]};
+				conflictLists[curFaceIndex] };
 			curFace->set_data(fd);
 		}
 
 		raysToCheck.clear();
-		raysToCheck.insert(conflictLists[curFaceIndex].conflictingRayIndices.begin(), conflictLists[curFaceIndex].conflictingRayIndices.end());
+		for (int i = conflictLists[curFaceIndex].conflictingRayIndicesUpwards.left; i <= conflictLists[curFaceIndex].conflictingRayIndicesUpwards.right; i += 2)
+			raysToCheck.insert(i);
+		for (int i = conflictLists[curFaceIndex].conflictingRayIndicesDownwards.left; i <= conflictLists[curFaceIndex].conflictingRayIndicesDownwards.right; i += 2)
+			raysToCheck.insert(i);
 	}
 }
 
-void AAS1DModeArrangementDS::checkUnderRays(std::map<Color_, int> &underColorCounts, std::vector<bool> &currentlyUnder, Face_handle curFace)
+void AAS1DModeArrangementDS::checkUnderRays(std::map<Color_, int>& underColorCounts, std::vector<bool>& currentlyUnder, Face_handle curFace)
 {
 	// check if the given underColorCounts and currentlyUnder are correct for curFace (for debug purposes only)
 	std::vector<bool> checkUnder;
@@ -263,66 +302,72 @@ void AAS1DModeArrangementDS::checkUnderRays(std::map<Color_, int> &underColorCou
 
 	for (int i = 0; i < checkUnder.size(); i++)
 		if (checkUnder[i] != currentlyUnder[i])
-			throw std::runtime_error("ew");
+			//throw std::runtime_error("ew");
+			std::cout << "ew";
 	if (!(checkUnderColorCounts.size() == underColorCounts.size() && std::equal(checkUnderColorCounts.begin(), checkUnderColorCounts.end(), underColorCounts.begin())))
-		throw std::runtime_error("jakkie");
+		//throw std::runtime_error("jakkie");
+		std::cout << "jakkie";
+
+	//std::cout << "yup";
 }
 
 // check if the current cutting adheres to the size bounds
 bool AAS1DModeArrangementDS::isValidCutting(int s, double leniance_factor, int leniance_constant)
 {
 	int max = 2 * ((double)colors.size() / s * leniance_factor + leniance_constant); // times 2 since we count each ray separately
-	bool lowerFace = false;
-	bool valid = true;
 
 	// Check if any face has more than n/s intersecting lines
 	for (Face_handle face = arrangement.faces_begin(); face != arrangement.faces_end(); face++)
 	{
-		int size = face->data().conflictList.conflictingRayIndices.size();
+		int size = (face->data().conflictList.conflictingRayIndicesUpwards.right - face->data().conflictList.conflictingRayIndicesUpwards.left) / 2 +
+			(face->data().conflictList.conflictingRayIndicesDownwards.right - face->data().conflictList.conflictingRayIndicesDownwards.left) / 2;
+
+
 		if (size != 2 * colors.size())
 			maxConflictListSize = std::max(maxConflictListSize, size);
 		if (size > max)
-		{
-			if (!lowerFace)
-			{
-				lowerFace = true; // the lower face intersects everything; we allow it as an exception, and remove its conflict list (only the empty query can end up here anyway)
-				face->data().conflictList = ConflictList();
-			}
-			else
-				valid = false;
-		}
+			return false;
 	}
-	return valid;
+	return true;
 }
 
 // compute the mode color of a given range query
-ColorCount AAS1DModeArrangementDS::queryMode(const Range &query)
+ColorCount AAS1DModeArrangementDS::queryMode(const Range& query)
 {
 	// map the interval to a 2D point q and find the face containing it
 	Point_2 point(((double)query.left + query.right) / 2 - 0.5, ((double)query.right - query.left) / 2); //-0.5 in the x to adjust for inclusivity; recall that coordinates are integer
 	auto result = pointLocation->locate(point);
 
-	Face_const_handle face;
+	Face_const_handle face, empty;
 
 	// if we land on a vertex/edge we can choose an arbitrary adjacent face
-	if (const Face_const_handle *face_ptr = std::get_if<Face_const_handle>(&result))
+	if (const Face_const_handle* face_ptr = std::get_if<Face_const_handle>(&result))
 	{
 		face = *face_ptr;
 	}
-	else if (const Halfedge_const_handle *edge_ptr = std::get_if<Halfedge_const_handle>(&result))
+	else if (const Halfedge_const_handle* edge_ptr = std::get_if<Halfedge_const_handle>(&result))
 	{
 		face = (*edge_ptr)->face();
 	}
-	else if (const Vertex_const_handle *vertex_ptr = std::get_if<Vertex_const_handle>(&result))
+	else if (const Vertex_const_handle* vertex_ptr = std::get_if<Vertex_const_handle>(&result))
 	{
 		face = (*vertex_ptr)->incident_halfedges()->face();
 	}
 
+	if (face == empty)
+		throw std::exception("didn't find face");
+
 	// candidate colors are those in the conflict list and the mode color of all lines below
 	FaceData faceData = face->data();
-	std::set<int> candidateColors = faceData.conflictList.conflictingPointColors;
+	std::set<int> candidateColors;
+	for (int i = faceData.conflictList.conflictingRayIndicesUpwards.left; i <= faceData.conflictList.conflictingRayIndicesUpwards.right; i += 2)
+		candidateColors.insert(colors[i / 2]);
+	for (int i = faceData.conflictList.conflictingRayIndicesDownwards.left; i <= faceData.conflictList.conflictingRayIndicesDownwards.right; i += 2)
+		candidateColors.insert(colors[i / 2]);
 	if (faceData.mode.color != -1)
 		candidateColors.insert(faceData.mode.color);
+
+	//std::cout << "nr colors: " << candidateColors.size() << std::endl;
 
 	// compute the color with maximum frequency
 	ColorCount mode;
@@ -337,7 +382,7 @@ ColorCount AAS1DModeArrangementDS::queryMode(const Range &query)
 	return mode;
 }
 
-AAS1DModeArrangementDS::AAS1DModeArrangementDS(std::vector<Color_> colors, int numColors, int s, std::mt19937 &generator) : colors(colors)
+AAS1DModeArrangementDS::AAS1DModeArrangementDS(std::vector<Color_> colors, int numColors, int s) : colors(colors)
 {
 	// build a range tree for each color separately
 	std::vector<std::vector<int>> indicesWithColor = generateIndicesWithColor(colors, numColors);
@@ -351,7 +396,12 @@ AAS1DModeArrangementDS::AAS1DModeArrangementDS(std::vector<Color_> colors, int n
 	while (true)
 	{
 		// sample some rays to use as a cutting
-		std::vector<Ray_2> sampledRays = sample(rays, std::max(1.0, s * log(s) / log(2)), generator);
+		std::vector<Ray_2> sampledRays;
+		for (int i = 1; i < s; i++) {
+			int index = 2 * (int)(i * ((double)colors.size() / s));
+			sampledRays.push_back(rays[index]);
+			sampledRays.push_back(rays[index + 1]);
+		}
 
 		// create an arrangement from the sampled rays
 		CGAL::insert(arrangement, sampledRays.begin(), sampledRays.end());
@@ -361,11 +411,11 @@ AAS1DModeArrangementDS::AAS1DModeArrangementDS(std::vector<Color_> colors, int n
 		computeFaceData();
 
 		// if the conflict lists are valid, we are done. otherwise, we try again.
-		if (isValidCutting(s, 5, 5)) // parameters are kinda magic (TODO?)
+		if (isValidCutting(s, 3, 3)) // parameters are kinda magic (TODO?)
 			break;
 
 		// reset and try again
-		arrangement = Arrangement_2();
+		arrangement.clear();
 		maxConflictListSize = 0;
 		retry++;
 		if (retry > MAX_RETRY)

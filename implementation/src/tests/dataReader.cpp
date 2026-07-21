@@ -4,7 +4,8 @@
 
 namespace DataReader
 {
-	std::string dataFolder = "C:\\Users\\6224474\\OneDrive - Universiteit Utrecht\\Documents\\code\\implementing_chromatic_knn\\implementation\\data\\";
+	//std::string dataFolder = "C:\\Users\\6224474\\OneDrive - Universiteit Utrecht\\Documents\\code\\implementing_chromatic_knn\\implementation\\data\\";
+	std::string dataFolder = "C:\\Users\\erwin\\Documents\\phd\\code\\implementing_chromatic_knn\\implementation\\data\\";
 	//std::string dataFolder = "/home/ggiezeman/data/datasets/";
 
 	std::vector<std::string> split(std::string str, char delimiter)

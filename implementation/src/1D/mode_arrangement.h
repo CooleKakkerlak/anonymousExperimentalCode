@@ -19,8 +19,7 @@
 // arrangement based implementation
 
 struct ConflictList {
-	std::set<int> conflictingRayIndices;
-	std::set<Color_> conflictingPointColors;
+	Range conflictingRayIndicesUpwards, conflictingRayIndicesDownwards; //inclusive-inclusive range of conflicting rays
 };
 
 struct FaceData {
@@ -49,13 +48,12 @@ typedef Arrangement_2::Vertex_const_handle Vertex_const_handle;
 
 
 struct AAS1DModeArrangementDS : AAS1DModeDS {
-
 private:
 	std::vector<Color_> colors;
 	std::vector<Ray_2> rays;
 	Arrangement_2 arrangement;
 	std::unique_ptr<PointLocation> pointLocation;
-	int maxConflictListSize;
+	int maxConflictListSize = 0;
 	std::vector<RangeTree1D> rangeTrees;
 
 	void computeFunctionRays();
@@ -68,7 +66,7 @@ public:
 	ColorCount queryMode(const Range& query) override;
 	long getDSMemoryUsage() override;
 	std::string getName() override;
-	AAS1DModeArrangementDS(std::vector<Color_> colors, int numColors, int s, std::mt19937& generator);
+	AAS1DModeArrangementDS(std::vector<Color_> colors, int numColors, int s);
 	AAS1DModeArrangementDS(AAS1DModeArrangementDS&&) = delete;
 	AAS1DModeArrangementDS& operator=(AAS1DModeArrangementDS&&) = delete;
 };

@@ -1,5 +1,4 @@
 #include "myRangeTree.h"
-#include "../mem_size.hpp"
 
 MyRangeTree::MyRangeTree(std::vector<ColoredPoint_2> points, bool sorted)
 {
@@ -33,16 +32,6 @@ MyRangeTree::MyRangeTree(std::vector<ColoredPoint_2> points, bool sorted)
 }
 
 MyRangeTree::MyRangeTree(std::vector<Point_2> &points, std::vector<Color_> &colors, bool sorted) : MyRangeTree(convertPoints(points, colors), sorted) {}
-
-std::vector<ColoredPoint_2> MyRangeTree::convertPoints(std::vector<Point_2> &points, std::vector<Color_> &colors)
-{
-	std::vector<ColoredPoint_2> res;
-	for (int i = 0; i < points.size(); i++)
-	{
-		res.push_back(ColoredPoint_2(points[i], colors[i]));
-	}
-	return res;
-}
 
 int MyRangeTree::rangeCount1D(const Range2D &range) const
 {
@@ -109,19 +98,5 @@ long MyRangeTree::getMemUsage() const
 		count += left->getMemUsage();
 	if (right != nullptr)
 		count += right->getMemUsage();
-	return count;
-}
-
-size_t MyRangeTree::heap_size() const
-{
-	using memory_size::heap_size_of;
-	using memory_size::total_size_of;
-	size_t count = 0;
-	count += heap_size_of(pointsSorted);
-	count += heap_size_of(ys);
-	if (left != nullptr)
-		count += total_size_of(*left);
-	if (right != nullptr)
-		count += total_size_of(*right);
 	return count;
 }

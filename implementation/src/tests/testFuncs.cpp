@@ -20,7 +20,7 @@ namespace TestFuncs
 		return out;
 	}
 
-	std::vector<Scenario> generateScenarios(std::vector<int> ns, std::vector<int> ss, std::vector<int> ks, std::vector<int> numColorss, double defaultPower, std::vector<double> alphas, std::vector<int> gammas)
+	std::vector<Scenario> generateScenarios(std::vector<int> ns, std::vector<int> ss, std::vector<int> ks, std::vector<int> numColorss, double defaultPower, std::vector<double> alphas, std::vector<int> gammas, std::vector<int> checkerboardStrips)
 	{
 		std::vector<Scenario> scenarios;
 		for (int n : ns)
@@ -28,23 +28,25 @@ namespace TestFuncs
 				for (int numColors : numColorss)
 					for (double alpha : alphas)
 						for (int gamma : gammas)
-						{
-							Scenario scenario;
-							scenario.synthetic = true;
-							scenario.numPoints = n;
-							if (s == -1)
-								scenario.s = (int)std::pow(n, defaultPower);
-							else
-								scenario.s = s;
-							scenario.numColors = numColors;
-							scenario.ks = ks;
-							scenario.numQueries = 1000;
-							scenario.alpha = alpha;
-							scenario.gamma = gamma;
-							if (!scenario.isValid())
-								continue;
-							scenarios.push_back(scenario);
-						}
+							for (int checkerboardStrip : checkerboardStrips)
+							{
+								Scenario scenario;
+								scenario.synthetic = true;
+								scenario.numPoints = n;
+								if (s == -1)
+									scenario.s = (int)std::pow(n, defaultPower);
+								else
+									scenario.s = s;
+								scenario.numColors = numColors;
+								scenario.ks = ks;
+								scenario.numQueries = 10000;
+								scenario.alpha = alpha;
+								scenario.gamma = gamma;
+								scenario.checkerStrips = checkerboardStrip;
+								if (!scenario.isValid())
+									continue;
+								scenarios.push_back(scenario);
+							}
 		return scenarios;
 	}
 

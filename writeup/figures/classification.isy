@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE ipestyle SYSTEM "ipe.dtd">
+<ipestyle name="classification">
+<color name="Bettina blue" value="0 0.4 0.796"/>
+<color name="Bettina green" value="0.282 0.557 0"/>
+<color name="Bettina yellow" value="1 0.604 0"/>
+<color name="Bettina red" value="0.836 0 0.289"/>
+</ipestyle>

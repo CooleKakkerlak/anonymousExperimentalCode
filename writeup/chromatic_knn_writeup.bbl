@@ -1,0 +1,97 @@
+\begin{thebibliography}{10}
+
+\bibitem{code}
+{\em Code to generate / run experiments (anonymized)}.
+\newblock
+  \url{https://anonymous.4open.science/r/anonymousExperimentalCode-F2D0}.
+
+\bibitem{chan2014modeQuery}
+{\sc T.~M. Chan, S.~Durocher, K.~G. Larsen, J.~Morrison, and B.~T. Wilkinson},
+  {\em Linear-space data structures for range mode query in arrays}, Theory of
+  Computing Systems, 55 (2014), pp.~719--741.
+
+\bibitem{chazelle1993cutting}
+{\sc B.~Chazelle}, {\em Cutting hyperplanes for divide-and-conquer}, Discrete
+  \& Computational Geometry, 9 (1993), pp.~145--158.
+
+\bibitem{cover1967nearest}
+{\sc T.~Cover and P.~Hart}, {\em Nearest neighbor pattern classification}, IEEE
+  transactions on information theory, 13 (1967), pp.~21--27,
+  \url{https://doi.org/10.1109/TIT.1967.1053964},
+  \url{https://doi.org/10.1109/TIT.1967.1053964}.
+
+\bibitem{edelsbrunner86const_arran_lines_hyper_applic}
+{\sc H.~Edelsbrunner, J.~O'Rourke, and R.~Seidel}, {\em Constructing
+  arrangements of lines and hyperplanes with applications}, {SIAM} J. Comput.,
+  15 (1986), pp.~341--363, \url{https://doi.org/10.1137/0215024},
+  \url{https://doi.org/10.1137/0215024}.
+
+\bibitem{gupta2018ColoredSearchingSurvey}
+{\sc P.~Gupta, R.~Janardan, S.~Rahul, and M.~Smid}, {\em Computational
+  geometry: Generalized (or colored) intersection searching}, in Handbook of
+  Data Structures and Applications, Chapman and Hall/CRC, 2004, pp.~1043--1058,
+  \url{https://doi.org/https://doi.org/10.1201/9781420035179}.
+
+\bibitem{gupta1995colorReporting}
+{\sc P.~Gupta, R.~Janardan, and M.~H.~M. Smid}, {\em Further results on
+  generalized intersection searching problems: Counting, reporting, and
+  dynamization}, J. Algorithms, 19 (1995), pp.~282--317,
+  \url{https://doi.org/10.1006/JAGM.1995.1038},
+  \url{https://doi.org/10.1006/jagm.1995.1038}.
+
+\bibitem{janardan1993generalizedIntersectionSearching}
+{\sc R.~Janardan and M.~A. L{\'{o}}pez}, {\em Generalized intersection
+  searching problems}, Int. J. Comput. Geom. Appl., 3 (1993), pp.~39--69,
+  \url{https://doi.org/10.1142/S021819599300004X}.
+
+\bibitem{krizanc2005modeSets}
+{\sc D.~Krizanc, P.~Morin, and M.~Smid}, {\em Range mode and range median
+  queries on lists and trees}, Nordic Journal of Computing, 12 (2005),
+  pp.~1--17.
+
+\bibitem{misra1982finding}
+{\sc J.~Misra and D.~Gries}, {\em Finding repeated elements}, Science of
+  computer programming, 2 (1982), pp.~143--152.
+
+\bibitem{OpenStreetMap}
+{\sc {OpenStreetMap contributors}}, {\em {Planet dump retrieved from
+  https://planet.osm.org }}.
+\newblock \url{ https://www.openstreetmap.org }, 2017.
+
+\bibitem{QGIS_software}
+{\sc {QGIS Development Team}}, {\em QGIS Geographic Information System}, QGIS
+  Association, 2026, \url{https://www.qgis.org}.
+
+\bibitem{rahul2011efficient}
+{\sc S.~Rahul, P.~Gupta, R.~Janardan, and K.~S. Rajan}, {\em Efficient top-k
+  queries for orthogonal ranges}, in International Workshop on Algorithms and
+  Computation, Springer, 2011, pp.~110--121.
+
+\bibitem{tang2014data}
+{\sc J.~Tang, S.~Alelyani, and H.~Liu}, {\em Data classification: algorithms
+  and applications}, in Data Mining and Knowledge Discovery Series, CRC press,
+  2014, pp.~37--64.
+
+\bibitem{cgal:library}
+{\sc {The CGAL Project}}, {\em {CGAL} User and Reference Manual}, {CGAL
+  Editorial Board}, {6.1.1}~ed., 2026,
+  \url{https://doc.cgal.org/6.1.1/Manual/packages.html}.
+
+\bibitem{chromatic_knn2025}
+{\sc T.~van~der Horst, M.~L{\"o}ffler, and F.~Staals}, {\em Chromatic
+  $k$-nearest neighbor queries}, Journal of Computational Geometry, 16 (2025),
+  pp.~1--43, \url{https://doi.org/10.20382/jocg.v16i1a3},
+  \url{https://doi.org/10.20382/jocg.v16i1a3}.
+
+\bibitem{cgal:arrangements}
+{\sc R.~Wein, E.~Berberich, E.~Fogel, D.~Halperin, M.~Hemmer, O.~Salzman, and
+  B.~Zukerman}, {\em {2D} arrangements}, in {CGAL} User and Reference Manual,
+  {CGAL Editorial Board}, {6.1.1}~ed., 2026,
+  \url{https://doc.cgal.org/6.1.1/Manual/packages.html#PkgArrangementOnSurface2}.
+
+\bibitem{yu2012processing}
+{\sc A.~Yu, P.~K. Agarwal, and J.~Yang}, {\em Processing a large number of
+  continuous preference top-k queries}, in Proceedings of the 2012 ACM SIGMOD
+  international conference on management of data, 2012, pp.~397--408.
+
+\end{thebibliography}

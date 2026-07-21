@@ -4,8 +4,6 @@
 // first on x, then on y
 struct MyRangeTree
 {
-private:
-	std::vector<ColoredPoint_2> convertPoints(std::vector<Point_2> &points, std::vector<Color_> &colors);
 
 public:
 	double minX, maxX;
@@ -28,5 +26,4 @@ public:
 	std::vector<ColoredPoint_2> rangeReport(const Range2D &range) const;
 
 	long getMemUsage() const;
-	size_t heap_size() const;
 };
