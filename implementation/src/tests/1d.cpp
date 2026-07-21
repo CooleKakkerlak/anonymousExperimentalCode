@@ -371,29 +371,6 @@ void Tester1D::run()
 					file.output(scenario, res);
 				}
 			}
-			printMemoryUsage();
 		}
-	}
-}
-
-void Tester1D::printMemoryUsage()
-{
-	PROCESS_MEMORY_COUNTERS_EX pmc;
-
-	if (GetProcessMemoryInfo(GetCurrentProcess(),
-		reinterpret_cast<PROCESS_MEMORY_COUNTERS*>(&pmc),
-		sizeof(pmc)))
-	{
-		std::ofstream log("C:\\Users\\erwin\\Documents\\phd\\code\\implementing_chromatic_knn\\implementation\\results\\memory.csv", std::ios::app);
-
-		log << pmc.WorkingSetSize << ","
-			<< pmc.PeakWorkingSetSize << ","
-			<< pmc.PrivateUsage << ","
-			<< pmc.PagefileUsage << "\n";
-
-		std::cout << pmc.WorkingSetSize << ","
-			<< pmc.PeakWorkingSetSize << ","
-			<< pmc.PrivateUsage << ","
-			<< pmc.PagefileUsage << "\n";
 	}
 }
